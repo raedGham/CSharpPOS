@@ -101,7 +101,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(lblTitle);
             panel1.Controls.Add(btnAddClient);
-            panel1.Location = new Point(693, 44);
+            panel1.Location = new Point(547, 42);
             panel1.Name = "panel1";
             panel1.Size = new Size(247, 137);
             panel1.TabIndex = 5;
@@ -160,7 +160,7 @@
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(btnAddStock);
-            panel2.Location = new Point(421, 44);
+            panel2.Location = new Point(275, 42);
             panel2.Name = "panel2";
             panel2.Size = new Size(247, 137);
             panel2.TabIndex = 8;
@@ -218,7 +218,7 @@
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(btnAddItem);
-            panel3.Location = new Point(148, 44);
+            panel3.Location = new Point(2, 42);
             panel3.Name = "panel3";
             panel3.Size = new Size(247, 137);
             panel3.TabIndex = 9;
@@ -278,7 +278,7 @@
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(label3);
             panel4.Controls.Add(btnAddCategory);
-            panel4.Location = new Point(421, 204);
+            panel4.Location = new Point(275, 202);
             panel4.Name = "panel4";
             panel4.Size = new Size(247, 137);
             panel4.TabIndex = 10;
@@ -336,7 +336,7 @@
             panel5.Controls.Add(pictureBox5);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(btnAddSupplier);
-            panel5.Location = new Point(693, 204);
+            panel5.Location = new Point(547, 202);
             panel5.Name = "panel5";
             panel5.Size = new Size(247, 137);
             panel5.TabIndex = 9;
@@ -394,7 +394,7 @@
             panel6.Controls.Add(pictureBox6);
             panel6.Controls.Add(label5);
             panel6.Controls.Add(btnAddUnit);
-            panel6.Location = new Point(421, 367);
+            panel6.Location = new Point(275, 365);
             panel6.Name = "panel6";
             panel6.Size = new Size(247, 137);
             panel6.TabIndex = 10;
@@ -452,7 +452,7 @@
             panel7.Controls.Add(pictureBox7);
             panel7.Controls.Add(label6);
             panel7.Controls.Add(btnAddDelivery);
-            panel7.Location = new Point(693, 367);
+            panel7.Location = new Point(547, 365);
             panel7.Name = "panel7";
             panel7.Size = new Size(247, 137);
             panel7.TabIndex = 9;
@@ -510,7 +510,7 @@
             panel8.Controls.Add(pictureBox8);
             panel8.Controls.Add(label7);
             panel8.Controls.Add(btnAddItemCatg);
-            panel8.Location = new Point(148, 204);
+            panel8.Location = new Point(2, 202);
             panel8.Name = "panel8";
             panel8.Size = new Size(247, 137);
             panel8.TabIndex = 10;
@@ -569,7 +569,7 @@
             panel9.Controls.Add(pictureBox9);
             panel9.Controls.Add(label8);
             panel9.Controls.Add(btnAddIngredient);
-            panel9.Location = new Point(148, 367);
+            panel9.Location = new Point(2, 365);
             panel9.Name = "panel9";
             panel9.Size = new Size(247, 137);
             panel9.TabIndex = 10;
@@ -625,7 +625,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(985, 611);
+            ClientSize = new Size(1079, 611);
             Controls.Add(panel9);
             Controls.Add(panel8);
             Controls.Add(panel6);

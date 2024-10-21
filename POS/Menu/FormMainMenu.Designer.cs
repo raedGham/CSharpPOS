@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
-            panelDesktopPane = new Panel();
             panelMenu = new Panel();
             btnReports = new Button();
             btnBuy = new Button();
@@ -42,22 +41,10 @@
             btnCloseChildForm = new Button();
             lblTitle = new Label();
             label1 = new Label();
+            panelDesktopPane = new Panel();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
             SuspendLayout();
-            // 
-            // panelDesktopPane
-            // 
-            panelDesktopPane.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelDesktopPane.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelDesktopPane.BackColor = Color.LightGray;
-            panelDesktopPane.BackgroundImageLayout = ImageLayout.None;
-            panelDesktopPane.Location = new Point(202, 83);
-            panelDesktopPane.Name = "panelDesktopPane";
-            panelDesktopPane.Size = new Size(764, 516);
-            panelDesktopPane.TabIndex = 2;
-            panelDesktopPane.Visible = false;
-         
             // 
             // panelMenu
             // 
@@ -206,9 +193,8 @@
             panelTitleBar.Controls.Add(label1);
             panelTitleBar.Location = new Point(202, -1);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(764, 85);
+            panelTitleBar.Size = new Size(874, 85);
             panelTitleBar.TabIndex = 4;
-           
             // 
             // btnCloseChildForm
             // 
@@ -228,7 +214,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(575, 26);
+            lblTitle.Location = new Point(685, 26);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(129, 32);
             lblTitle.TabIndex = 0;
@@ -244,20 +230,28 @@
             label1.TabIndex = 0;
             label1.Text = "لوحة التحكم";
             // 
+            // panelDesktopPane
+            // 
+            panelDesktopPane.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panelDesktopPane.Location = new Point(202, 83);
+            panelDesktopPane.Name = "panelDesktopPane";
+            panelDesktopPane.Size = new Size(874, 504);
+            panelDesktopPane.TabIndex = 5;
+            panelDesktopPane.Paint += panelDesktopPane_Paint;
+            // 
             // FormMainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(966, 599);
+            ClientSize = new Size(1076, 599);
+            Controls.Add(panelDesktopPane);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
-            Controls.Add(panelDesktopPane);
             Name = "FormMainMenu";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
             Text = "FormMainMenu";
             WindowState = FormWindowState.Maximized;
-           
             panelMenu.ResumeLayout(false);
             panelTitleBar.ResumeLayout(false);
             panelTitleBar.PerformLayout();
@@ -265,7 +259,6 @@
         }
 
         #endregion
-        private Panel panelDesktopPane;
         private Panel panelMenu;
         private Button btnSettings;
         private Panel panelTitleBar;
@@ -278,5 +271,6 @@
         private Button btnAccounts;
         private Label lblTitle;
         private Button btnCloseChildForm;
+        private Panel panelDesktopPane;
     }
 }

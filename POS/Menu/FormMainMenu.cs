@@ -158,13 +158,17 @@ namespace POS.Menu
             this.WindowState = FormWindowState.Minimized;
         }
 
-    
 
-     
+
+
         private void btnCloseChildForm_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
