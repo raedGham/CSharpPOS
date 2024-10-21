@@ -37,7 +37,6 @@
             btnListSupplier = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -96,6 +95,7 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(208, 49);
             panel2.Name = "panel2";
+            panel2.RightToLeft = RightToLeft.Yes;
             panel2.Size = new Size(247, 137);
             panel2.TabIndex = 8;
             // 
@@ -104,7 +104,7 @@
             btnListSupplier.FlatStyle = FlatStyle.Flat;
             btnListSupplier.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnListSupplier.Image = (Image)resources.GetObject("btnListSupplier.Image");
-            btnListSupplier.ImageAlign = ContentAlignment.MiddleRight;
+            btnListSupplier.ImageAlign = ContentAlignment.MiddleLeft;
             btnListSupplier.Location = new Point(21, 56);
             btnListSupplier.Name = "btnListSupplier";
             btnListSupplier.Size = new Size(102, 32);
@@ -132,21 +132,11 @@
             label1.TabIndex = 5;
             label1.Text = "حسابات التجار";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(399, 223);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 9;
-            label2.Text = "label2";
-            // 
             // Accounts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Accounts";
@@ -158,7 +148,6 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -171,6 +160,5 @@
         private Button btnListSupplier;
         private PictureBox pictureBox2;
         private Label label1;
-        private Label label2;
     }
 }

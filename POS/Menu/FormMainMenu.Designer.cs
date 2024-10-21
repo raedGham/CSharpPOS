@@ -40,7 +40,6 @@
             panelTitleBar = new Panel();
             btnCloseChildForm = new Button();
             lblTitle = new Label();
-            label1 = new Label();
             panelDesktopPane = new Panel();
             panelMenu.SuspendLayout();
             panelTitleBar.SuspendLayout();
@@ -66,7 +65,7 @@
             // 
             btnReports.FlatAppearance.BorderSize = 0;
             btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnReports.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnReports.ForeColor = Color.Gainsboro;
             btnReports.Image = (Image)resources.GetObject("btnReports.Image");
             btnReports.ImageAlign = ContentAlignment.MiddleLeft;
@@ -85,7 +84,7 @@
             // 
             btnBuy.FlatAppearance.BorderSize = 0;
             btnBuy.FlatStyle = FlatStyle.Flat;
-            btnBuy.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBuy.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnBuy.ForeColor = Color.Gainsboro;
             btnBuy.Image = (Image)resources.GetObject("btnBuy.Image");
             btnBuy.ImageAlign = ContentAlignment.MiddleLeft;
@@ -104,7 +103,7 @@
             // 
             btnSell.FlatAppearance.BorderSize = 0;
             btnSell.FlatStyle = FlatStyle.Flat;
-            btnSell.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSell.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnSell.ForeColor = Color.Gainsboro;
             btnSell.Image = (Image)resources.GetObject("btnSell.Image");
             btnSell.ImageAlign = ContentAlignment.MiddleLeft;
@@ -123,7 +122,7 @@
             // 
             btnFiles.FlatAppearance.BorderSize = 0;
             btnFiles.FlatStyle = FlatStyle.Flat;
-            btnFiles.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFiles.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnFiles.ForeColor = Color.Gainsboro;
             btnFiles.Image = (Image)resources.GetObject("btnFiles.Image");
             btnFiles.ImageAlign = ContentAlignment.MiddleLeft;
@@ -142,7 +141,7 @@
             // 
             btnAccounts.FlatAppearance.BorderSize = 0;
             btnAccounts.FlatStyle = FlatStyle.Flat;
-            btnAccounts.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAccounts.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnAccounts.ForeColor = Color.Gainsboro;
             btnAccounts.Image = (Image)resources.GetObject("btnAccounts.Image");
             btnAccounts.ImageAlign = ContentAlignment.MiddleLeft;
@@ -169,7 +168,7 @@
             // 
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSettings.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
             btnSettings.ForeColor = Color.Gainsboro;
             btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
@@ -190,7 +189,6 @@
             panelTitleBar.BackColor = Color.DarkSlateBlue;
             panelTitleBar.Controls.Add(btnCloseChildForm);
             panelTitleBar.Controls.Add(lblTitle);
-            panelTitleBar.Controls.Add(label1);
             panelTitleBar.Location = new Point(202, -1);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(874, 85);
@@ -212,23 +210,13 @@
             // 
             lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.Font = new Font("Janna LT", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(685, 26);
+            lblTitle.Location = new Point(688, 17);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(129, 32);
+            lblTitle.Size = new Size(135, 44);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "لوحة التحكم";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(808, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(129, 32);
-            label1.TabIndex = 0;
-            label1.Text = "لوحة التحكم";
             // 
             // panelDesktopPane
             // 
@@ -262,7 +250,6 @@
         private Panel panelMenu;
         private Button btnSettings;
         private Panel panelTitleBar;
-        private Label label1;
         private Panel panelLogo;
         private Button btnReports;
         private Button btnBuy;

@@ -169,6 +169,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmSell";
+            RightToLeft = RightToLeft.Yes;
             Text = "frmSell";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

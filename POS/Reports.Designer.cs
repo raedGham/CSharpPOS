@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             panel1 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             lblTitle = new Label();
             btnListUser = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            button1 = new Button();
-            button2 = new Button();
             panel2 = new Panel();
             button4 = new Button();
             label1 = new Label();
@@ -55,10 +55,40 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(lblTitle);
             panel1.Controls.Add(btnListUser);
-            panel1.Location = new Point(659, 65);
+            panel1.Location = new Point(625, 62);
             panel1.Name = "panel1";
             panel1.Size = new Size(265, 251);
             panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleRight;
+            button2.Location = new Point(26, 159);
+            button2.Name = "button2";
+            button2.Size = new Size(210, 32);
+            button2.TabIndex = 15;
+            button2.Text = "لائحة";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(26, 111);
+            button1.Name = "button1";
+            button1.Size = new Size(210, 32);
+            button1.TabIndex = 14;
+            button1.Text = "حركة المبيع";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button1.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
@@ -90,43 +120,13 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(26, 111);
-            button1.Name = "button1";
-            button1.Size = new Size(210, 32);
-            button1.TabIndex = 14;
-            button1.Text = "حركة المبيع";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(26, 159);
-            button2.Name = "button2";
-            button2.Size = new Size(210, 32);
-            button2.TabIndex = 15;
-            button2.Text = "لائحة";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button2.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(button4);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(button5);
-            panel2.Location = new Point(348, 65);
+            panel2.Location = new Point(314, 62);
             panel2.Name = "panel2";
             panel2.Size = new Size(265, 251);
             panel2.TabIndex = 16;
@@ -178,7 +178,7 @@
             panel3.Controls.Add(button7);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(button8);
-            panel3.Location = new Point(46, 65);
+            panel3.Location = new Point(12, 62);
             panel3.Name = "panel3";
             panel3.Size = new Size(265, 251);
             panel3.TabIndex = 16;
@@ -227,11 +227,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(990, 508);
+            ClientSize = new Size(944, 508);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Reports";
+            RightToLeft = RightToLeft.Yes;
             Text = "Reports";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

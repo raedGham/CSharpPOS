@@ -41,7 +41,8 @@ namespace POS.Menu
                 index = random.Next(ThemeColor.ColorList.Count);
             }
             tempIndex = index;
-            string color = ThemeColor.ColorList[index];
+            //string color = ThemeColor.ColorList[index];
+            string color = ThemeColor.ColorList[0];
             return ColorTranslator.FromHtml(color);
         }
         private void ActivateButton(object btnSender)
@@ -55,7 +56,7 @@ namespace POS.Menu
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular);
+                    currentButton.Font = new Font("Janna LT", 10F, FontStyle.Regular);
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
@@ -72,7 +73,7 @@ namespace POS.Menu
                 {
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.Font = new System.Drawing.Font("Janna LT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }

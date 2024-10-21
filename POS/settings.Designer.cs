@@ -34,23 +34,23 @@
             pictureBox1 = new PictureBox();
             lblTitle = new Label();
             panel2 = new Panel();
+            btnListUser = new Button();
+            btnAddUser = new Button();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             panel3 = new Panel();
+            btnAbout = new Button();
             pictureBox3 = new PictureBox();
             label2 = new Label();
             panel4 = new Panel();
+            btnEstablishment = new Button();
             pictureBox4 = new PictureBox();
             label3 = new Label();
             panel5 = new Panel();
+            btnListCockpit = new Button();
             pictureBox5 = new PictureBox();
             label4 = new Label();
             btnAddCockpit = new Button();
-            btnListCockpit = new Button();
-            btnListUser = new Button();
-            btnAddUser = new Button();
-            btnAbout = new Button();
-            btnEstablishment = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -120,6 +120,32 @@
             panel2.Size = new Size(247, 137);
             panel2.TabIndex = 8;
             // 
+            // btnListUser
+            // 
+            btnListUser.FlatStyle = FlatStyle.Flat;
+            btnListUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnListUser.Image = (Image)resources.GetObject("btnListUser.Image");
+            btnListUser.ImageAlign = ContentAlignment.MiddleRight;
+            btnListUser.Location = new Point(11, 81);
+            btnListUser.Name = "btnListUser";
+            btnListUser.Size = new Size(102, 32);
+            btnListUser.TabIndex = 11;
+            btnListUser.Text = "لائحة";
+            btnListUser.UseVisualStyleBackColor = true;
+            // 
+            // btnAddUser
+            // 
+            btnAddUser.FlatStyle = FlatStyle.Flat;
+            btnAddUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddUser.Image = (Image)resources.GetObject("btnAddUser.Image");
+            btnAddUser.ImageAlign = ContentAlignment.MiddleRight;
+            btnAddUser.Location = new Point(11, 43);
+            btnAddUser.Name = "btnAddUser";
+            btnAddUser.Size = new Size(102, 32);
+            btnAddUser.TabIndex = 10;
+            btnAddUser.Text = "إضافة";
+            btnAddUser.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -151,6 +177,19 @@
             panel3.Size = new Size(247, 137);
             panel3.TabIndex = 8;
             // 
+            // btnAbout
+            // 
+            btnAbout.FlatStyle = FlatStyle.Flat;
+            btnAbout.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAbout.Image = (Image)resources.GetObject("btnAbout.Image");
+            btnAbout.ImageAlign = ContentAlignment.MiddleRight;
+            btnAbout.Location = new Point(3, 57);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new Size(120, 32);
+            btnAbout.TabIndex = 8;
+            btnAbout.Text = "حول البرنامج";
+            btnAbout.UseVisualStyleBackColor = true;
+            // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
@@ -181,6 +220,19 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(247, 137);
             panel4.TabIndex = 8;
+            // 
+            // btnEstablishment
+            // 
+            btnEstablishment.FlatStyle = FlatStyle.Flat;
+            btnEstablishment.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEstablishment.Image = (Image)resources.GetObject("btnEstablishment.Image");
+            btnEstablishment.ImageAlign = ContentAlignment.MiddleRight;
+            btnEstablishment.Location = new Point(28, 59);
+            btnEstablishment.Name = "btnEstablishment";
+            btnEstablishment.Size = new Size(102, 32);
+            btnEstablishment.TabIndex = 8;
+            btnEstablishment.Text = "المؤسسة";
+            btnEstablishment.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -215,6 +267,19 @@
             panel5.TabIndex = 8;
             panel5.Paint += panel5_Paint;
             // 
+            // btnListCockpit
+            // 
+            btnListCockpit.FlatStyle = FlatStyle.Flat;
+            btnListCockpit.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnListCockpit.Image = (Image)resources.GetObject("btnListCockpit.Image");
+            btnListCockpit.ImageAlign = ContentAlignment.MiddleRight;
+            btnListCockpit.Location = new Point(21, 81);
+            btnListCockpit.Name = "btnListCockpit";
+            btnListCockpit.Size = new Size(102, 32);
+            btnListCockpit.TabIndex = 9;
+            btnListCockpit.Text = "لائحة";
+            btnListCockpit.UseVisualStyleBackColor = true;
+            // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
@@ -248,71 +313,6 @@
             btnAddCockpit.Text = "إضافة";
             btnAddCockpit.UseVisualStyleBackColor = true;
             // 
-            // btnListCockpit
-            // 
-            btnListCockpit.FlatStyle = FlatStyle.Flat;
-            btnListCockpit.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            btnListCockpit.Image = (Image)resources.GetObject("btnListCockpit.Image");
-            btnListCockpit.ImageAlign = ContentAlignment.MiddleRight;
-            btnListCockpit.Location = new Point(21, 81);
-            btnListCockpit.Name = "btnListCockpit";
-            btnListCockpit.Size = new Size(102, 32);
-            btnListCockpit.TabIndex = 9;
-            btnListCockpit.Text = "لائحة";
-            btnListCockpit.UseVisualStyleBackColor = true;
-            // 
-            // btnListUser
-            // 
-            btnListUser.FlatStyle = FlatStyle.Flat;
-            btnListUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            btnListUser.Image = (Image)resources.GetObject("btnListUser.Image");
-            btnListUser.ImageAlign = ContentAlignment.MiddleRight;
-            btnListUser.Location = new Point(11, 81);
-            btnListUser.Name = "btnListUser";
-            btnListUser.Size = new Size(102, 32);
-            btnListUser.TabIndex = 11;
-            btnListUser.Text = "لائحة";
-            btnListUser.UseVisualStyleBackColor = true;
-            // 
-            // btnAddUser
-            // 
-            btnAddUser.FlatStyle = FlatStyle.Flat;
-            btnAddUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAddUser.Image = (Image)resources.GetObject("btnAddUser.Image");
-            btnAddUser.ImageAlign = ContentAlignment.MiddleRight;
-            btnAddUser.Location = new Point(11, 43);
-            btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(102, 32);
-            btnAddUser.TabIndex = 10;
-            btnAddUser.Text = "إضافة";
-            btnAddUser.UseVisualStyleBackColor = true;
-            // 
-            // btnAbout
-            // 
-            btnAbout.FlatStyle = FlatStyle.Flat;
-            btnAbout.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAbout.Image = (Image)resources.GetObject("btnAbout.Image");
-            btnAbout.ImageAlign = ContentAlignment.MiddleRight;
-            btnAbout.Location = new Point(3, 57);
-            btnAbout.Name = "btnAbout";
-            btnAbout.Size = new Size(120, 32);
-            btnAbout.TabIndex = 8;
-            btnAbout.Text = "حول البرنامج";
-            btnAbout.UseVisualStyleBackColor = true;
-            // 
-            // btnEstablishment
-            // 
-            btnEstablishment.FlatStyle = FlatStyle.Flat;
-            btnEstablishment.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEstablishment.Image = (Image)resources.GetObject("btnEstablishment.Image");
-            btnEstablishment.ImageAlign = ContentAlignment.MiddleRight;
-            btnEstablishment.Location = new Point(28, 59);
-            btnEstablishment.Name = "btnEstablishment";
-            btnEstablishment.Size = new Size(102, 32);
-            btnEstablishment.TabIndex = 8;
-            btnEstablishment.Text = "المؤسسة";
-            btnEstablishment.UseVisualStyleBackColor = true;
-            // 
             // settings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -324,6 +324,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "settings";
+            RightToLeft = RightToLeft.Yes;
             Text = "settings";
             Load += settings_Load;
             panel1.ResumeLayout(false);
