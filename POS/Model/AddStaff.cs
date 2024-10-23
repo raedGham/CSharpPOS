@@ -11,32 +11,12 @@ using System.Windows.Forms;
 
 namespace POS.Model
 {
-    public partial class AddClient : Form
+    public partial class AddStaff : Form
     {
         public int id = 0;
-        public AddClient()
+        public AddStaff()
         {
             InitializeComponent();
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -44,11 +24,11 @@ namespace POS.Model
             string qry = "";
             if (id == 0)
             {
-                qry = "Insert into Clients values(@name, @address, @phone, @currentBalance)";
+                qry = "Insert into [Delivery Persons] values(@name, @address, @phone)";
             }
             else
             {
-                qry = "Update Clients set clientName = @name, Address=@address, Phone = @phone  where ID = @id ";
+                qry = "Update [Delivery Persons] set [Person Name] = @name, Address=@address, Phone = @phone  where ID = @id ";
             }
 
             Hashtable ht = new Hashtable();
@@ -56,7 +36,7 @@ namespace POS.Model
             ht.Add("@name", txtName.Text);
             ht.Add("@address", txtAddress.Text);
             ht.Add("@phone", txtPhone.Text);
-            ht.Add("@currentBalance", 0);
+
 
             if (MainClass.SQ1(qry, ht) > 0)
             {
@@ -70,14 +50,9 @@ namespace POS.Model
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

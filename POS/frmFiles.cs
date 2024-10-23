@@ -37,5 +37,22 @@ namespace POS
             View.ClientsList frm = new View.ClientsList();
             frm.Show();
         }
+
+        private void frmFiles_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListDelivery_Click(object sender, EventArgs e)
+        {
+            View.staffList frm = new View.staffList();
+            frm.Show();
+        }
+
+        private void btnListSupplier_Click(object sender, EventArgs e)
+        {
+            View.SupplierList frm = new View.SupplierList();
+            frm.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace POS.View
 {
-    partial class ClientsList
+    partial class staffList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staffList));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsList));
+            panel2 = new Panel();
+            pictureBox2 = new PictureBox();
+            label3 = new Label();
+            label2 = new Label();
+            txtSearch = new TextBox();
+            btnNew = new Button();
+            lblRecords = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            lblTitle = new Label();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -42,34 +52,148 @@
             dgvPhone = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
-            panel2 = new Panel();
-            label2 = new Label();
-            txtSearch = new TextBox();
-            btnNew = new Button();
-            lblRecords = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            lblTitle = new Label();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DarkSlateBlue;
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(txtSearch);
+            panel2.Controls.Add(btnNew);
+            panel2.Controls.Add(lblRecords);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(lblTitle);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(951, 71);
+            panel2.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(839, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(100, 71);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Janna LT", 16.1999989F);
+            label3.ForeColor = Color.Gainsboro;
+            label3.Location = new Point(642, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(191, 41);
+            label3.TabIndex = 7;
+            label3.Text = "لائحة عمال التوصيل";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Bold);
+            label2.ForeColor = Color.Gainsboro;
+            label2.Location = new Point(418, 28);
+            label2.Name = "label2";
+            label2.Size = new Size(37, 26);
+            label2.TabIndex = 5;
+            label2.Text = "بحث";
+            // 
+            // txtSearch
+            // 
+            txtSearch.Font = new Font("Janna LT", 10.1999989F);
+            txtSearch.Location = new Point(216, 25);
+            txtSearch.Margin = new Padding(3, 2, 3, 2);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(196, 33);
+            txtSearch.TabIndex = 4;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            // 
+            // btnNew
+            // 
+            btnNew.Font = new Font("Janna LT", 9F);
+            btnNew.Image = (Image)resources.GetObject("btnNew.Image");
+            btnNew.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNew.Location = new Point(498, 24);
+            btnNew.Margin = new Padding(3, 2, 3, 2);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(78, 30);
+            btnNew.TabIndex = 3;
+            btnNew.Text = "جديد";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
+            // 
+            // lblRecords
+            // 
+            lblRecords.AutoSize = true;
+            lblRecords.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            lblRecords.ForeColor = Color.Gainsboro;
+            lblRecords.Location = new Point(88, 31);
+            lblRecords.Name = "lblRecords";
+            lblRecords.Size = new Size(17, 19);
+            lblRecords.TabIndex = 3;
+            lblRecords.Text = "0";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Janna LT", 10.1999989F);
+            label1.ForeColor = Color.Gainsboro;
+            label1.Location = new Point(111, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(88, 26);
+            label1.TabIndex = 2;
+            label1.Text = "عدد السجلات";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1631, 9);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(109, 70);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Janna LT", 16.1999989F);
+            lblTitle.ForeColor = Color.Gainsboro;
+            lblTitle.Location = new Point(1500, 28);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(122, 41);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "لائحة الزبائن";
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSize = true;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(0, 84);
+            panel1.Location = new Point(-48, 73);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1018, 422);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(999, 513);
+            panel1.TabIndex = 4;
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Janna LT", 10.1999989F);
@@ -88,14 +212,14 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(51, 2);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RightToLeft = RightToLeft.Yes;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1018, 422);
-            dataGridView1.TabIndex = 1;
+            dataGridView1.Size = new Size(945, 509);
+            dataGridView1.TabIndex = 2;
             dataGridView1.CellClick += dataGridView1_CellClick;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
@@ -157,137 +281,40 @@
             dgvDel.SortMode = DataGridViewColumnSortMode.Automatic;
             dgvDel.Width = 50;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.DarkSlateBlue;
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(txtSearch);
-            panel2.Controls.Add(btnNew);
-            panel2.Controls.Add(lblRecords);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(lblTitle);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1018, 86);
-            panel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Bold);
-            label2.ForeColor = Color.Gainsboro;
-            label2.Location = new Point(430, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 26);
-            label2.TabIndex = 5;
-            label2.Text = "بحث";
-            // 
-            // txtSearch
-            // 
-            txtSearch.Font = new Font("Janna LT", 10.1999989F);
-            txtSearch.Location = new Point(228, 37);
-            txtSearch.Margin = new Padding(3, 2, 3, 2);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(196, 33);
-            txtSearch.TabIndex = 4;
-            txtSearch.TextChanged += txtSearch_TextChanged;
-            // 
-            // btnNew
-            // 
-            btnNew.Font = new Font("Janna LT", 9F);
-            btnNew.Image = (Image)resources.GetObject("btnNew.Image");
-            btnNew.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNew.Location = new Point(594, 32);
-            btnNew.Margin = new Padding(3, 2, 3, 2);
-            btnNew.Name = "btnNew";
-            btnNew.Size = new Size(78, 30);
-            btnNew.TabIndex = 3;
-            btnNew.Text = "جديد";
-            btnNew.UseVisualStyleBackColor = true;
-            btnNew.Click += btnNew_Click;
-            // 
-            // lblRecords
-            // 
-            lblRecords.AutoSize = true;
-            lblRecords.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            lblRecords.ForeColor = Color.Gainsboro;
-            lblRecords.Location = new Point(88, 41);
-            lblRecords.Name = "lblRecords";
-            lblRecords.Size = new Size(17, 19);
-            lblRecords.TabIndex = 3;
-            lblRecords.Text = "0";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Janna LT", 10.1999989F);
-            label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(111, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 26);
-            label1.TabIndex = 2;
-            label1.Text = "عدد السجلات";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(880, 9);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(109, 70);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Janna LT", 16.1999989F);
-            lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(749, 28);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(122, 41);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "لائحة الزبائن";
-            lblTitle.Click += lblTitle_Click;
-            // 
-            // ClientsList
+            // staffList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1018, 506);
-            Controls.Add(panel2);
+            ClientSize = new Size(951, 583);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "ClientsList";
-            RightToLeft = RightToLeft.Yes;
-            Text = "لائحة الزبائن";
-            Load += ClientsList_Load;
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Controls.Add(panel2);
+            Name = "staffList";
+            Text = "staff";
+            Load += staffList_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Panel panel1;
+
         private Panel panel2;
-        private DataGridView dataGridView1;
-        private Label lblTitle;
+        private Label label2;
+        private TextBox txtSearch;
+        private Button btnNew;
         private Label lblRecords;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button btnNew;
-        private Label label2;
-        private TextBox txtSearch;
+        private Label lblTitle;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private Panel panel1;
+        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvName;

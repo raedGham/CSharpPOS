@@ -14,7 +14,7 @@ namespace POS
    
             static string OfficeServer = "DESKTOP-UHLS283\\SQLEXPRESS";
             static string LaptopServer = "SPECTRE";
-            public static readonly string con_string = "Persist Security Info=False;TrustServerCertificate=True;Trusted_Connection=True;database=fastPOS;server=" + LaptopServer;
+            public static readonly string con_string = "Persist Security Info=False;TrustServerCertificate=True;Trusted_Connection=True;database=fastPOS;server=" + OfficeServer;
             public static SqlConnection con = new SqlConnection(con_string);
 
 

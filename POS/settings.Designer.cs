@@ -69,22 +69,21 @@
             panel1.Controls.Add(btnPreferences);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(lblTitle);
-            panel1.Location = new Point(707, 56);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(619, 42);
             panel1.Name = "panel1";
-            panel1.Size = new Size(282, 182);
+            panel1.Size = new Size(247, 137);
             panel1.TabIndex = 6;
             // 
             // btnPreferences
             // 
+            btnPreferences.FlatAppearance.BorderColor = Color.Gainsboro;
             btnPreferences.FlatStyle = FlatStyle.Flat;
-            btnPreferences.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPreferences.Font = new Font("Janna LT", 9.749999F);
             btnPreferences.Image = (Image)resources.GetObject("btnPreferences.Image");
             btnPreferences.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPreferences.Location = new Point(24, 76);
-            btnPreferences.Margin = new Padding(3, 4, 3, 4);
+            btnPreferences.Location = new Point(21, 57);
             btnPreferences.Name = "btnPreferences";
-            btnPreferences.Size = new Size(117, 43);
+            btnPreferences.Size = new Size(102, 32);
             btnPreferences.TabIndex = 7;
             btnPreferences.Text = "التفضيلات";
             btnPreferences.UseVisualStyleBackColor = true;
@@ -92,10 +91,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(167, 32);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(146, 24);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(94, 117);
+            pictureBox1.Size = new Size(82, 88);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -103,10 +101,10 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitle.Location = new Point(32, 7);
+            lblTitle.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold);
+            lblTitle.Location = new Point(28, 5);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(128, 45);
+            lblTitle.Size = new Size(95, 35);
             lblTitle.TabIndex = 5;
             lblTitle.Text = "التفضيلات";
             lblTitle.Click += lblTitle_Click;
@@ -118,36 +116,35 @@
             panel2.Controls.Add(btnAddUser);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(384, 56);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(336, 42);
             panel2.Name = "panel2";
-            panel2.Size = new Size(282, 182);
+            panel2.Size = new Size(247, 137);
             panel2.TabIndex = 8;
             // 
             // btnListUser
             // 
+            btnListUser.FlatAppearance.BorderColor = Color.Gainsboro;
             btnListUser.FlatStyle = FlatStyle.Flat;
-            btnListUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnListUser.Font = new Font("Janna LT", 9.749999F);
             btnListUser.Image = (Image)resources.GetObject("btnListUser.Image");
             btnListUser.ImageAlign = ContentAlignment.MiddleLeft;
-            btnListUser.Location = new Point(13, 108);
-            btnListUser.Margin = new Padding(3, 4, 3, 4);
+            btnListUser.Location = new Point(11, 81);
             btnListUser.Name = "btnListUser";
-            btnListUser.Size = new Size(117, 43);
+            btnListUser.Size = new Size(102, 32);
             btnListUser.TabIndex = 11;
             btnListUser.Text = "لائحة";
             btnListUser.UseVisualStyleBackColor = true;
             // 
             // btnAddUser
             // 
+            btnAddUser.FlatAppearance.BorderColor = Color.Gainsboro;
             btnAddUser.FlatStyle = FlatStyle.Flat;
-            btnAddUser.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddUser.Font = new Font("Janna LT", 9.749999F);
             btnAddUser.Image = (Image)resources.GetObject("btnAddUser.Image");
             btnAddUser.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddUser.Location = new Point(13, 57);
-            btnAddUser.Margin = new Padding(3, 4, 3, 4);
+            btnAddUser.Location = new Point(11, 43);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(117, 43);
+            btnAddUser.Size = new Size(102, 32);
             btnAddUser.TabIndex = 10;
             btnAddUser.Text = "إضافة";
             btnAddUser.UseVisualStyleBackColor = true;
@@ -155,10 +152,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(167, 32);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(146, 24);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(94, 117);
+            pictureBox2.Size = new Size(82, 88);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
@@ -166,10 +162,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(13, 7);
+            label1.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold);
+            label1.Location = new Point(11, 5);
             label1.Name = "label1";
-            label1.Size = new Size(151, 45);
+            label1.Size = new Size(112, 35);
             label1.TabIndex = 5;
             label1.Text = "المستخدمين";
             // 
@@ -179,22 +175,21 @@
             panel3.Controls.Add(btnAbout);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(63, 56);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(55, 42);
             panel3.Name = "panel3";
-            panel3.Size = new Size(282, 182);
+            panel3.Size = new Size(247, 137);
             panel3.TabIndex = 8;
             // 
             // btnAbout
             // 
+            btnAbout.FlatAppearance.BorderColor = Color.Gainsboro;
             btnAbout.FlatStyle = FlatStyle.Flat;
-            btnAbout.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAbout.Font = new Font("Janna LT", 9.749999F);
             btnAbout.Image = (Image)resources.GetObject("btnAbout.Image");
             btnAbout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAbout.Location = new Point(3, 76);
-            btnAbout.Margin = new Padding(3, 4, 3, 4);
+            btnAbout.Location = new Point(3, 57);
             btnAbout.Name = "btnAbout";
-            btnAbout.Size = new Size(137, 43);
+            btnAbout.Size = new Size(120, 32);
             btnAbout.TabIndex = 8;
             btnAbout.Text = "حول البرنامج";
             btnAbout.UseVisualStyleBackColor = true;
@@ -202,10 +197,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(167, 32);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(146, 24);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(94, 117);
+            pictureBox3.Size = new Size(82, 88);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 6;
             pictureBox3.TabStop = false;
@@ -213,10 +207,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(24, 7);
+            label2.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold);
+            label2.Location = new Point(21, 5);
             label2.Name = "label2";
-            label2.Size = new Size(148, 45);
+            label2.Size = new Size(110, 35);
             label2.TabIndex = 5;
             label2.Text = "حول البرنامج";
             // 
@@ -226,22 +220,21 @@
             panel4.Controls.Add(btnEstablishment);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(label3);
-            panel4.Location = new Point(707, 284);
-            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Location = new Point(619, 213);
             panel4.Name = "panel4";
-            panel4.Size = new Size(282, 182);
+            panel4.Size = new Size(247, 137);
             panel4.TabIndex = 8;
             // 
             // btnEstablishment
             // 
+            btnEstablishment.FlatAppearance.BorderColor = Color.Gainsboro;
             btnEstablishment.FlatStyle = FlatStyle.Flat;
-            btnEstablishment.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEstablishment.Font = new Font("Janna LT", 9.749999F);
             btnEstablishment.Image = (Image)resources.GetObject("btnEstablishment.Image");
             btnEstablishment.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEstablishment.Location = new Point(32, 79);
-            btnEstablishment.Margin = new Padding(3, 4, 3, 4);
+            btnEstablishment.Location = new Point(28, 59);
             btnEstablishment.Name = "btnEstablishment";
-            btnEstablishment.Size = new Size(117, 43);
+            btnEstablishment.Size = new Size(102, 32);
             btnEstablishment.TabIndex = 8;
             btnEstablishment.Text = "المؤسسة";
             btnEstablishment.UseVisualStyleBackColor = true;
@@ -249,10 +242,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(167, 32);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(146, 24);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(94, 117);
+            pictureBox4.Size = new Size(82, 88);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 6;
             pictureBox4.TabStop = false;
@@ -260,10 +252,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(54, 7);
+            label3.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold);
+            label3.Location = new Point(47, 5);
             label3.Name = "label3";
-            label3.Size = new Size(124, 45);
+            label3.Size = new Size(93, 35);
             label3.TabIndex = 5;
             label3.Text = "المؤسسة";
             // 
@@ -274,23 +266,22 @@
             panel5.Controls.Add(pictureBox5);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(btnAddCockpit);
-            panel5.Location = new Point(384, 284);
-            panel5.Margin = new Padding(3, 4, 3, 4);
+            panel5.Location = new Point(336, 213);
             panel5.Name = "panel5";
-            panel5.Size = new Size(282, 182);
+            panel5.Size = new Size(247, 137);
             panel5.TabIndex = 8;
             panel5.Paint += panel5_Paint;
             // 
             // btnListCockpit
             // 
+            btnListCockpit.FlatAppearance.BorderColor = Color.Gainsboro;
             btnListCockpit.FlatStyle = FlatStyle.Flat;
-            btnListCockpit.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnListCockpit.Font = new Font("Janna LT", 9.749999F);
             btnListCockpit.Image = (Image)resources.GetObject("btnListCockpit.Image");
             btnListCockpit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnListCockpit.Location = new Point(24, 108);
-            btnListCockpit.Margin = new Padding(3, 4, 3, 4);
+            btnListCockpit.Location = new Point(21, 81);
             btnListCockpit.Name = "btnListCockpit";
-            btnListCockpit.Size = new Size(117, 43);
+            btnListCockpit.Size = new Size(102, 32);
             btnListCockpit.TabIndex = 9;
             btnListCockpit.Text = "لائحة";
             btnListCockpit.UseVisualStyleBackColor = true;
@@ -298,10 +289,9 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(167, 32);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(146, 24);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(94, 117);
+            pictureBox5.Size = new Size(82, 88);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
@@ -309,38 +299,37 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(33, 7);
+            label4.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold);
+            label4.Location = new Point(29, 5);
             label4.Name = "label4";
-            label4.Size = new Size(126, 45);
+            label4.Size = new Size(94, 35);
             label4.TabIndex = 5;
             label4.Text = "المؤشرات";
             // 
             // btnAddCockpit
             // 
+            btnAddCockpit.FlatAppearance.BorderColor = Color.Gainsboro;
             btnAddCockpit.FlatStyle = FlatStyle.Flat;
-            btnAddCockpit.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddCockpit.Font = new Font("Janna LT", 9.749999F);
             btnAddCockpit.Image = (Image)resources.GetObject("btnAddCockpit.Image");
             btnAddCockpit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddCockpit.Location = new Point(24, 57);
-            btnAddCockpit.Margin = new Padding(3, 4, 3, 4);
+            btnAddCockpit.Location = new Point(21, 43);
             btnAddCockpit.Name = "btnAddCockpit";
-            btnAddCockpit.Size = new Size(117, 43);
+            btnAddCockpit.Size = new Size(102, 32);
             btnAddCockpit.TabIndex = 4;
             btnAddCockpit.Text = "إضافة";
             btnAddCockpit.UseVisualStyleBackColor = true;
             // 
             // settings
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1034, 736);
+            ClientSize = new Size(905, 552);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "settings";
             RightToLeft = RightToLeft.Yes;
             Text = "الاعدادات";

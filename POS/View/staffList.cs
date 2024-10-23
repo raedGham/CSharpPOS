@@ -11,18 +11,16 @@ using System.Windows.Forms;
 
 namespace POS.View
 {
-    public partial class ClientsList : Form
+    public partial class staffList : Form
     {
-        public ClientsList()
+        public staffList()
         {
             InitializeComponent();
         }
 
-
-
         public void GetData()
         {
-            string qry = "Select ID, ClientName, Address, phone from clients where ClientName like '%" + txtSearch.Text + "%' ";
+            string qry = "Select ID, [Person Name], Address, Phone from [Delivery Persons] where [Person Name] like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvName);
@@ -45,8 +43,8 @@ namespace POS.View
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Model.AddClient addClient = new Model.AddClient();
-            addClient.ShowDialog();
+            Model.AddStaff addStaff = new Model.AddStaff();
+            addStaff.ShowDialog();
             GetData();
 
         }
@@ -55,7 +53,7 @@ namespace POS.View
         {
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
-                Model.AddClient frm = new Model.AddClient();
+                Model.AddStaff frm = new Model.AddStaff();
                 frm.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvID"].Value);
                 frm.txtName.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.txtAddress.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvAddress"].Value);
@@ -71,7 +69,7 @@ namespace POS.View
                 DialogResult result = MessageBox.Show("هل تريد محي القيد؟", "سؤال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string qry = "Delete from clients where ID= " + id + "";
+                    string qry = "Delete from [Delivery Persons] where ID= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQ1(qry, ht);
                     MessageBox.Show("تم محي القيد بنجاح");
@@ -80,15 +78,16 @@ namespace POS.View
 
             }
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void lblTitle_Click(object sender, EventArgs e)
+        private void staffList_Load(object sender, EventArgs e)
         {
-
+            GetData();
         }
+
+        
     }
 }

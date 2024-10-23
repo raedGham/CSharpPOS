@@ -11,28 +11,27 @@ using System.Windows.Forms;
 
 namespace POS.View
 {
-    public partial class ClientsList : Form
+    public partial class SupplierList : Form
     {
-        public ClientsList()
+        public SupplierList()
         {
             InitializeComponent();
         }
 
-
-
         public void GetData()
         {
-            string qry = "Select ID, ClientName, Address, phone from clients where ClientName like '%" + txtSearch.Text + "%' ";
+            string qry = "Select ID, SupplierName, Address, phone, SupplyType from Suplliers where SupplierName like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvName);
             lb.Items.Add(dgvAddress);
             lb.Items.Add(dgvPhone);
+            lb.Items.Add(dgvSupply);
 
             MainClass.LoadData(qry, dataGridView1, lb);
             lblRecords.Text = (dataGridView1.Rows.Count - 1).ToString();
         }
-        private void ClientsList_Load(object sender, EventArgs e)
+        private void SuppliersList_Load(object sender, EventArgs e)
         {
             GetData();
         }
@@ -45,8 +44,8 @@ namespace POS.View
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Model.AddClient addClient = new Model.AddClient();
-            addClient.ShowDialog();
+            Model.AddSupplier addSupplier = new Model.AddSupplier();
+            addSupplier.ShowDialog();
             GetData();
 
         }
@@ -71,7 +70,7 @@ namespace POS.View
                 DialogResult result = MessageBox.Show("هل تريد محي القيد؟", "سؤال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string qry = "Delete from clients where ID= " + id + "";
+                    string qry = "Delete from Suplliers where ID= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQ1(qry, ht);
                     MessageBox.Show("تم محي القيد بنجاح");
@@ -81,14 +80,6 @@ namespace POS.View
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }
