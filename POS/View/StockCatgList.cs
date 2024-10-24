@@ -8,18 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS.Model
+namespace POS.View
 {
-    public partial class AddSupplier : Form
+    public partial class StockCatgList : Form
     {
-        public AddSupplier()
+        public StockCatgList()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnNew_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Model.AddStockCatg addStockCatg = new Model.AddStockCatg();
+            addStockCatg.ShowDialog();
+           // GetData();
         }
     }
 }

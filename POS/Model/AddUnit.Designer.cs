@@ -1,6 +1,6 @@
 ﻿namespace POS.Model
 {
-    partial class AddStaff
+    partial class AddUnit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStaff));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUnit));
             panel2 = new Panel();
-            panel3 = new Panel();
             pictureBox1 = new PictureBox();
             lblTitle = new Label();
             panel1 = new Panel();
             btnSave = new Button();
             btnClose = new Button();
-            label3 = new Label();
-            txtPhone = new TextBox();
-            label2 = new Label();
-            txtAddress = new TextBox();
             label1 = new Label();
-            txtName = new TextBox();
+            txtDescription = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -50,32 +45,20 @@
             // panel2
             // 
             panel2.BackColor = Color.MidnightBlue;
-            panel2.Controls.Add(panel3);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(lblTitle);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(701, 115);
-            panel2.TabIndex = 11;
-            panel2.Paint += panel2_Paint;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.Control;
-            panel3.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panel3.Location = new Point(0, 111);
-            panel3.Name = "panel3";
-            panel3.RightToLeft = RightToLeft.Yes;
-            panel3.Size = new Size(703, 357);
-            panel3.TabIndex = 5;
+            panel2.Size = new Size(800, 115);
+            panel2.TabIndex = 21;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(544, 12);
+            pictureBox1.Location = new Point(661, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 93);
+            pictureBox1.Size = new Size(94, 93);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -85,11 +68,11 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Janna LT", 16.1999989F);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(361, 29);
+            lblTitle.Location = new Point(454, 27);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(169, 52);
+            lblTitle.Size = new Size(176, 52);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "عمال التوصيل";
+            lblTitle.Text = "وحدات القياس";
             // 
             // panel1
             // 
@@ -97,10 +80,10 @@
             panel1.Controls.Add(btnSave);
             panel1.Controls.Add(btnClose);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 499);
+            panel1.Location = new Point(0, 349);
             panel1.Name = "panel1";
-            panel1.Size = new Size(701, 101);
-            panel1.TabIndex = 12;
+            panel1.Size = new Size(800, 101);
+            panel1.TabIndex = 22;
             // 
             // btnSave
             // 
@@ -134,80 +117,36 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(595, 331);
-            label3.Name = "label3";
-            label3.RightToLeft = RightToLeft.Yes;
-            label3.Size = new Size(58, 31);
-            label3.TabIndex = 18;
-            label3.Text = "الهاتف";
-            // 
-            // txtPhone
-            // 
-            txtPhone.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPhone.Location = new Point(480, 331);
-            txtPhone.Name = "txtPhone";
-            txtPhone.RightToLeft = RightToLeft.Yes;
-            txtPhone.Size = new Size(95, 39);
-            txtPhone.TabIndex = 17;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(595, 259);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 31);
-            label2.TabIndex = 16;
-            label2.Text = "العنوان";
-            // 
-            // txtAddress
-            // 
-            txtAddress.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtAddress.Location = new Point(41, 259);
-            txtAddress.Name = "txtAddress";
-            txtAddress.RightToLeft = RightToLeft.Yes;
-            txtAddress.Size = new Size(535, 39);
-            txtAddress.TabIndex = 15;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(595, 191);
+            label1.Location = new Point(695, 164);
             label1.Name = "label1";
             label1.Size = new Size(56, 31);
-            label1.TabIndex = 14;
-            label1.Text = "الاسم";
+            label1.TabIndex = 24;
+            label1.Text = "الوحدة";
             // 
-            // txtName
+            // txtDescription
             // 
-            txtName.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtName.Location = new Point(41, 191);
-            txtName.Name = "txtName";
-            txtName.RightToLeft = RightToLeft.Yes;
-            txtName.Size = new Size(535, 39);
-            txtName.TabIndex = 13;
+            txtDescription.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescription.Location = new Point(141, 164);
+            txtDescription.Name = "txtDescription";
+            txtDescription.RightToLeft = RightToLeft.Yes;
+            txtDescription.Size = new Size(535, 39);
+            txtDescription.TabIndex = 23;
             // 
-            // AddStaff
+            // AddUnit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(701, 600);
+            ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(txtDescription);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(label3);
-            Controls.Add(txtPhone);
-            Controls.Add(label2);
-            Controls.Add(txtAddress);
-            Controls.Add(label1);
-            Controls.Add(txtName);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "AddStaff";
-            Text = "AddStaff";
+            Name = "AddUnit";
+            Text = "AddUnit";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -219,17 +158,12 @@
         #endregion
 
         private Panel panel2;
-        private Panel panel3;
         private PictureBox pictureBox1;
         private Label lblTitle;
         private Panel panel1;
         private Button btnSave;
         private Button btnClose;
-        private Label label3;
-        public TextBox txtPhone;
-        private Label label2;
-        public TextBox txtAddress;
         private Label label1;
-        public TextBox txtName;
+        public TextBox txtDescription;
     }
 }

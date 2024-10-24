@@ -11,21 +11,20 @@ using System.Windows.Forms;
 
 namespace POS.View
 {
-    public partial class staffList : Form
+    public partial class IngredientList : Form
     {
-        public staffList()
+        public IngredientList()
         {
             InitializeComponent();
         }
 
         public void GetData()
         {
-            string qry = "Select ID, [Person Name], Address, Phone from [Delivery Persons] where [Person Name] like '%" + txtSearch.Text + "%' ";
+            string qry = "Select ID, Description from ingredients where Description like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
-            lb.Items.Add(dgvName);
-            lb.Items.Add(dgvAddress);
-            lb.Items.Add(dgvPhone);
+            lb.Items.Add(dgvDescription);
+
 
             MainClass.LoadData(qry, dataGridView1, lb);
             lblRecords.Text = (dataGridView1.Rows.Count - 1).ToString();
@@ -40,24 +39,26 @@ namespace POS.View
         {
             GetData();
         }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Model.AddStaff addStaff = new Model.AddStaff();
-            addStaff.ShowDialog();
+            Model.AddIngredient addIngredient = new Model.AddIngredient();
+            addIngredient.ShowDialog();
             GetData();
-
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void IngredientList_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
-                Model.AddStaff frm = new Model.AddStaff();
+                Model.AddIngredient frm = new Model.AddIngredient();
                 frm.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvID"].Value);
-                frm.txtName.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
-                frm.txtAddress.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvAddress"].Value);
-                frm.txtPhone.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvPhone"].Value);
+                frm.txtDescription.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvDescription"].Value);
+               
                 frm.ShowDialog();
                 GetData();
 
@@ -69,7 +70,7 @@ namespace POS.View
                 DialogResult result = MessageBox.Show("هل تريد محي القيد؟", "سؤال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string qry = "Delete from [Delivery Persons] where ID= " + id + "";
+                    string qry = "Delete from ingredients where ID= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQ1(qry, ht);
                     MessageBox.Show("تم محي القيد بنجاح");
@@ -78,16 +79,5 @@ namespace POS.View
 
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void staffList_Load(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
-       
     }
 }

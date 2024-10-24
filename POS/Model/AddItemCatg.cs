@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS.Model
 {
-    public partial class AddSupplier : Form
+    public partial class AddItemCatg : Form
     {
-        public AddSupplier()
+        public AddItemCatg()
         {
             InitializeComponent();
         }

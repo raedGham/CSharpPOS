@@ -61,10 +61,9 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSize = true;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(0, 84);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(0, 112);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1018, 422);
+            panel1.Size = new Size(1163, 563);
             panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -89,10 +88,10 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1018, 422);
+            dataGridView1.RowTemplate.Height = 39;
+            dataGridView1.Size = new Size(1163, 563);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -159,7 +158,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DarkSlateBlue;
+            panel2.BackColor = Color.MidnightBlue;
             panel2.Controls.Add(label2);
             panel2.Controls.Add(txtSearch);
             panel2.Controls.Add(btnNew);
@@ -169,9 +168,8 @@
             panel2.Controls.Add(lblTitle);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1018, 86);
+            panel2.Size = new Size(1163, 115);
             panel2.TabIndex = 2;
             // 
             // label2
@@ -179,19 +177,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Bold);
             label2.ForeColor = Color.Gainsboro;
-            label2.Location = new Point(430, 40);
+            label2.Location = new Point(491, 53);
             label2.Name = "label2";
-            label2.Size = new Size(37, 26);
+            label2.Size = new Size(44, 31);
             label2.TabIndex = 5;
             label2.Text = "بحث";
             // 
             // txtSearch
             // 
             txtSearch.Font = new Font("Janna LT", 10.1999989F);
-            txtSearch.Location = new Point(228, 37);
-            txtSearch.Margin = new Padding(3, 2, 3, 2);
+            txtSearch.Location = new Point(261, 49);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(196, 33);
+            txtSearch.Size = new Size(223, 39);
             txtSearch.TabIndex = 4;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
@@ -200,10 +197,9 @@
             btnNew.Font = new Font("Janna LT", 9F);
             btnNew.Image = (Image)resources.GetObject("btnNew.Image");
             btnNew.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNew.Location = new Point(594, 32);
-            btnNew.Margin = new Padding(3, 2, 3, 2);
+            btnNew.Location = new Point(679, 43);
             btnNew.Name = "btnNew";
-            btnNew.Size = new Size(78, 30);
+            btnNew.Size = new Size(89, 40);
             btnNew.TabIndex = 3;
             btnNew.Text = "جديد";
             btnNew.UseVisualStyleBackColor = true;
@@ -214,9 +210,9 @@
             lblRecords.AutoSize = true;
             lblRecords.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             lblRecords.ForeColor = Color.Gainsboro;
-            lblRecords.Location = new Point(88, 41);
+            lblRecords.Location = new Point(101, 55);
             lblRecords.Name = "lblRecords";
-            lblRecords.Size = new Size(17, 19);
+            lblRecords.Size = new Size(20, 23);
             lblRecords.TabIndex = 3;
             lblRecords.Text = "0";
             // 
@@ -225,9 +221,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Janna LT", 10.1999989F);
             label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(111, 39);
+            label1.Location = new Point(127, 52);
             label1.Name = "label1";
-            label1.Size = new Size(88, 26);
+            label1.Size = new Size(102, 31);
             label1.TabIndex = 2;
             label1.Text = "عدد السجلات";
             // 
@@ -235,10 +231,9 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(880, 9);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(1006, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(109, 70);
+            pictureBox1.Size = new Size(125, 93);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -249,21 +244,20 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Janna LT", 16.1999989F);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(749, 28);
+            lblTitle.Location = new Point(856, 37);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(122, 41);
+            lblTitle.Size = new Size(144, 52);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "لائحة الزبائن";
             lblTitle.Click += lblTitle_Click;
             // 
             // ClientsList
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1018, 506);
+            ClientSize = new Size(1163, 675);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ClientsList";
             RightToLeft = RightToLeft.Yes;
             Text = "لائحة الزبائن";
