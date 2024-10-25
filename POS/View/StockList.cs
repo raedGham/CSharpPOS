@@ -28,5 +28,10 @@ namespace POS.View
         {
 
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

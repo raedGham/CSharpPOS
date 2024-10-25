@@ -20,7 +20,7 @@ namespace POS.View
 
         public void GetData()
         {
-            string qry = "Select ID, SupplierName, Address, phone, SupplyType from Suplliers where SupplierName like '%" + txtSearch.Text + "%' ";
+            string qry = "Select ID, SupplierName, Address, phone, SupplyType from Suppliers where SupplierName like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvName);
@@ -31,10 +31,8 @@ namespace POS.View
             MainClass.LoadData(qry, dataGridView1, lb);
             lblRecords.Text = (dataGridView1.Rows.Count - 1).ToString();
         }
-        private void SuppliersList_Load(object sender, EventArgs e)
-        {
-            GetData();
-        }
+
+
 
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -54,7 +52,7 @@ namespace POS.View
         {
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
-                Model.AddClient frm = new Model.AddClient();
+                Model.AddSupplier frm = new Model.AddSupplier();
                 frm.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvID"].Value);
                 frm.txtName.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.txtAddress.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvAddress"].Value);
@@ -70,7 +68,7 @@ namespace POS.View
                 DialogResult result = MessageBox.Show("هل تريد محي القيد؟", "سؤال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string qry = "Delete from Suplliers where ID= " + id + "";
+                    string qry = "Delete from Suppliers where ID= " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQ1(qry, ht);
                     MessageBox.Show("تم محي القيد بنجاح");
@@ -80,6 +78,11 @@ namespace POS.View
             }
         }
 
-   
+        private void SupplierList_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        
     }
 }
