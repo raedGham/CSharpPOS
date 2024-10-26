@@ -20,11 +20,12 @@ namespace POS.View
 
         public void GetData()
         {
-            string qry = "Select I.ID, Description,  C.[Category Description], [Sales Price]  from [Sales Items] as I inner join [Sitems Categories] as C on C.ID = I.CategoryID  where Description like '%" + txtSearch.Text + "%' ";
+            string qry = "Select I.ID, Description,  C.[Category Description], C.ID, [Sales Price]  from [Sales Items] as I inner join [Sitems Categories] as C on C.ID = I.CategoryID  where Description like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvItem);
             lb.Items.Add(dgvCategory);
+            lb.Items.Add(dgvCatID);
             lb.Items.Add(dgvPrice);
 
 
@@ -54,9 +55,9 @@ namespace POS.View
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
             {
                 Model.AddItem frm = new Model.AddItem();
-      //          frm.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvID"].Value);
-      //          frm.txtCategory.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvCategory"].Value);
-      //          frm.txtNote.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvNote"].Value);
+                frm.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvID"].Value);
+                frm.cID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvCatID"].Value);
+     
                 frm.ShowDialog();
                 GetData();
 

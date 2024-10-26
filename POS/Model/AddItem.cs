@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace POS.Model
 {
@@ -35,11 +37,11 @@ namespace POS.Model
             string qry = "";
             if (id == 0)
             {
-                qry = "Insert into [Sales Items] values(@catid @description, @price , @img)";
+                qry = "Insert into [Sales Items] values(@catid, @description, @price , @active, @img)";
             }
             else
             {
-                qry = "Update [Sales Items]  set Description = @description , InThumb = @img, Price = @price , CategoryID=@catid  where ID = @id ";
+                qry = "Update [Sales Items]  set Description = @description , InThumb = @img, [Sales Price] = @price , CategoryID=@catid, Active =@active  where ID = @id ";
             }
             //For image 
             Image temp = new Bitmap(txtThumb.Image);
@@ -51,7 +53,8 @@ namespace POS.Model
             ht.Add("@id", id);
             ht.Add("@catid", Convert.ToInt32(cbCategory.SelectedValue));
             ht.Add("@description", txtItemName.Text);
-            ht.Add("@price", Convert.ToDecimal(txtPrice.Text));
+            ht.Add("@price", Convert.ToDouble(txtPrice.Text));
+            ht.Add("@active", true);
             ht.Add("@img", imageByteArray);
 
 
@@ -73,6 +76,16 @@ namespace POS.Model
             // for cb fill
             string qry = "select ID  'id', [Category Description] 'name' from [Sitems Categories] ";
             MainClass.CBFill(qry, cbCategory);
+            if (cID > 0) //For update
+            {
+                cbCategory.SelectedValue = cID;
+
+            }
+
+            if (id > 0)
+            {
+                ForUpdateLoadData();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -88,6 +101,35 @@ namespace POS.Model
             {
                 filePath = ofd.FileName;
                 txtThumb.Image = new Bitmap(filePath);
+            }
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ForUpdateLoadData()
+        {
+            string qry = @"select * from [sales Items] where ID = " + id + "";
+            SqlCommand cmd = new SqlCommand(qry, MainClass.con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                txtItemName.Text = dt.Rows[0]["Description"].ToString();
+                txtPrice.Text = dt.Rows[0]["Sales Price"].ToString();
+
+                byte[] imageData = dt.Rows[0]["InThumb"] as byte[];
+                if (imageData !=null)
+                {
+                    Byte[] imageArray = (byte[])(dt.Rows[0]["InThumb"]);
+                    byte[] imageByteArray = imageArray;
+                    txtThumb.Image = Image.FromStream(new MemoryStream(imageByteArray));
+                }
+
             }
         }
     }

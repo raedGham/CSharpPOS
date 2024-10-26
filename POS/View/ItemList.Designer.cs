@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemList));
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             label5 = new Label();
@@ -50,6 +50,7 @@
             dgvID = new DataGridViewTextBoxColumn();
             dgvItem = new DataGridViewTextBoxColumn();
             dgvCategory = new DataGridViewTextBoxColumn();
+            dgvCatID = new DataGridViewTextBoxColumn();
             dgvPrice = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
@@ -74,9 +75,8 @@
             panel2.Controls.Add(lblTitle);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1004, 93);
+            panel2.Size = new Size(1147, 124);
             panel2.TabIndex = 5;
             panel2.Paint += panel2_Paint;
             // 
@@ -84,10 +84,9 @@
             // 
             pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(895, 2);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Location = new Point(1023, 3);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(97, 82);
+            pictureBox4.Size = new Size(111, 109);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 11;
             pictureBox4.TabStop = false;
@@ -98,9 +97,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Janna LT", 16.1999989F);
             label5.ForeColor = Color.Gainsboro;
-            label5.Location = new Point(732, 28);
+            label5.Location = new Point(837, 37);
             label5.Name = "label5";
-            label5.Size = new Size(140, 41);
+            label5.Size = new Size(165, 52);
             label5.TabIndex = 10;
             label5.Text = "لائحة الاصناف";
             // 
@@ -110,9 +109,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Janna LT", 16.1999989F);
             label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(1537, 29);
+            label4.Location = new Point(1757, 39);
             label4.Name = "label4";
-            label4.Size = new Size(147, 41);
+            label4.Size = new Size(177, 52);
             label4.TabIndex = 9;
             label4.Text = "لائحة المكونات";
             // 
@@ -122,9 +121,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Janna LT", 16.1999989F);
             label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(2322, 29);
+            label3.Location = new Point(2654, 39);
             label3.Name = "label3";
-            label3.Size = new Size(196, 41);
+            label3.Size = new Size(234, 52);
             label3.TabIndex = 7;
             label3.Text = "لائحة وحدات القياس";
             // 
@@ -133,19 +132,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Bold);
             label2.ForeColor = Color.Gainsboro;
-            label2.Location = new Point(430, 40);
+            label2.Location = new Point(491, 53);
             label2.Name = "label2";
-            label2.Size = new Size(37, 26);
+            label2.Size = new Size(44, 31);
             label2.TabIndex = 5;
             label2.Text = "بحث";
             // 
             // txtSearch
             // 
             txtSearch.Font = new Font("Janna LT", 10.1999989F);
-            txtSearch.Location = new Point(228, 37);
-            txtSearch.Margin = new Padding(3, 2, 3, 2);
+            txtSearch.Location = new Point(261, 49);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(196, 33);
+            txtSearch.Size = new Size(223, 39);
             txtSearch.TabIndex = 4;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
@@ -154,10 +152,9 @@
             btnNew.Font = new Font("Janna LT", 9F);
             btnNew.Image = (Image)resources.GetObject("btnNew.Image");
             btnNew.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNew.Location = new Point(517, 35);
-            btnNew.Margin = new Padding(3, 2, 3, 2);
+            btnNew.Location = new Point(591, 47);
             btnNew.Name = "btnNew";
-            btnNew.Size = new Size(78, 30);
+            btnNew.Size = new Size(89, 40);
             btnNew.TabIndex = 3;
             btnNew.Text = "جديد";
             btnNew.UseVisualStyleBackColor = true;
@@ -168,9 +165,9 @@
             lblRecords.AutoSize = true;
             lblRecords.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             lblRecords.ForeColor = Color.Gainsboro;
-            lblRecords.Location = new Point(88, 41);
+            lblRecords.Location = new Point(101, 55);
             lblRecords.Name = "lblRecords";
-            lblRecords.Size = new Size(17, 19);
+            lblRecords.Size = new Size(20, 23);
             lblRecords.TabIndex = 3;
             lblRecords.Text = "0";
             // 
@@ -179,9 +176,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Janna LT", 10.1999989F);
             label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(111, 39);
+            label1.Location = new Point(127, 52);
             label1.Name = "label1";
-            label1.Size = new Size(88, 26);
+            label1.Size = new Size(102, 31);
             label1.TabIndex = 2;
             label1.Text = "عدد السجلات";
             // 
@@ -191,9 +188,9 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Janna LT", 16.1999989F);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(3252, 28);
+            lblTitle.Location = new Point(3717, 37);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(122, 41);
+            lblTitle.Size = new Size(144, 52);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "لائحة الزبائن";
             // 
@@ -201,41 +198,39 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(dataGridView1);
-            panel1.Location = new Point(0, 98);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(0, 131);
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.Yes;
-            panel1.Size = new Size(1004, 407);
+            panel1.Size = new Size(1147, 543);
             panel1.TabIndex = 7;
             // 
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Janna LT", 10.1999989F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Janna LT", 10.1999989F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, dgvID, dgvItem, dgvCategory, dgvPrice, dgvEdit, dgvDel });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Janna LT", 10.1999989F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, dgvID, dgvItem, dgvCategory, dgvCatID, dgvPrice, dgvEdit, dgvDel });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Janna LT", 10.1999989F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Location = new Point(3, 0);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RightToLeft = RightToLeft.Yes;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 39;
-            dataGridView1.Size = new Size(998, 406);
+            dataGridView1.Size = new Size(1141, 541);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -249,8 +244,8 @@
             // 
             // dgvID
             // 
-            dataGridViewCellStyle6.Font = new Font("Janna LT", 10.1999989F);
-            dgvID.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new Font("Janna LT", 10.1999989F);
+            dgvID.DefaultCellStyle = dataGridViewCellStyle2;
             dgvID.HeaderText = "الرمز";
             dgvID.MinimumWidth = 6;
             dgvID.Name = "dgvID";
@@ -259,22 +254,33 @@
             // dgvItem
             // 
             dgvItem.HeaderText = "الصنف";
+            dgvItem.MinimumWidth = 6;
             dgvItem.Name = "dgvItem";
             dgvItem.Width = 250;
             // 
             // dgvCategory
             // 
-            dataGridViewCellStyle7.Font = new Font("Janna LT", 10.1999989F);
-            dgvCategory.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Font = new Font("Janna LT", 10.1999989F);
+            dgvCategory.DefaultCellStyle = dataGridViewCellStyle3;
             dgvCategory.HeaderText = "الفئة";
             dgvCategory.MinimumWidth = 6;
             dgvCategory.Name = "dgvCategory";
             dgvCategory.Width = 175;
             // 
+            // dgvCatID
+            // 
+            dgvCatID.HeaderText = "CatID";
+            dgvCatID.MinimumWidth = 6;
+            dgvCatID.Name = "dgvCatID";
+            dgvCatID.Visible = false;
+            dgvCatID.Width = 125;
+            // 
             // dgvPrice
             // 
             dgvPrice.HeaderText = "سعر المبيع";
+            dgvPrice.MinimumWidth = 6;
             dgvPrice.Name = "dgvPrice";
+            dgvPrice.Width = 125;
             // 
             // dgvEdit
             // 
@@ -298,12 +304,11 @@
             // 
             // ItemList
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1004, 506);
+            ClientSize = new Size(1147, 675);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ItemList";
             RightToLeft = RightToLeft.Yes;
             Text = "ItemList";
@@ -338,6 +343,7 @@
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvItem;
         private DataGridViewTextBoxColumn dgvCategory;
+        private DataGridViewTextBoxColumn dgvCatID;
         private DataGridViewTextBoxColumn dgvPrice;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
