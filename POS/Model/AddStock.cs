@@ -16,7 +16,8 @@ namespace POS.Model
         {
             InitializeComponent();
         }
-
+        public int id = 0;
+       
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
