@@ -36,8 +36,6 @@
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             txtSearch = new TextBox();
             btnNew = new Button();
@@ -53,9 +51,9 @@
             dgvCategory = new DataGridViewTextBoxColumn();
             dgvSupplierID = new DataGridViewTextBoxColumn();
             dgvSupplier = new DataGridViewTextBoxColumn();
-            dgvUnit = new DataGridViewTextBoxColumn();
+            dgvQty = new DataGridViewTextBoxColumn();
             dgvUnitID = new DataGridViewTextBoxColumn();
-            Unit = new DataGridViewTextBoxColumn();
+            dgvUnit = new DataGridViewTextBoxColumn();
             dgvUnitPrice = new DataGridViewTextBoxColumn();
             dgvSalesPrice = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
@@ -82,14 +80,14 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1401, 115);
+            panel2.Size = new Size(1560, 115);
             panel2.TabIndex = 5;
             // 
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1235, 12);
+            pictureBox4.Location = new Point(1394, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(125, 93);
             pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -102,35 +100,12 @@
             label5.AutoSize = true;
             label5.Font = new Font("Janna LT", 16.1999989F);
             label5.ForeColor = Color.Gainsboro;
-            label5.Location = new Point(1084, 37);
+            label5.Location = new Point(1243, 37);
             label5.Name = "label5";
             label5.Size = new Size(145, 52);
             label5.TabIndex = 10;
             label5.Text = "لائحة المواد";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Janna LT", 16.1999989F);
-            label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(2011, 39);
-            label4.Name = "label4";
-            label4.Size = new Size(177, 52);
-            label4.TabIndex = 9;
-            label4.Text = "لائحة المكونات";
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Janna LT", 16.1999989F);
-            label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(2908, 39);
-            label3.Name = "label3";
-            label3.Size = new Size(234, 52);
-            label3.TabIndex = 7;
-            label3.Text = "لائحة وحدات القياس";
+         
             // 
             // label2
             // 
@@ -193,7 +168,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Janna LT", 16.1999989F);
             lblTitle.ForeColor = Color.Gainsboro;
-            lblTitle.Location = new Point(3971, 37);
+            lblTitle.Location = new Point(4130, 37);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(144, 52);
             lblTitle.TabIndex = 0;
@@ -206,7 +181,7 @@
             panel1.Location = new Point(0, 111);
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.Yes;
-            panel1.Size = new Size(1401, 550);
+            panel1.Size = new Size(1560, 550);
             panel1.TabIndex = 6;
             // 
             // dataGridView1
@@ -221,7 +196,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, dgvID, dgvDescription, dgvCatID, dgvCategory, dgvSupplierID, dgvSupplier, dgvUnit, dgvUnitID, Unit, dgvUnitPrice, dgvSalesPrice, dgvEdit, dgvDel });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, dgvID, dgvDescription, dgvCatID, dgvCategory, dgvSupplierID, dgvSupplier, dgvQty, dgvUnitID, dgvUnit, dgvUnitPrice, dgvSalesPrice, dgvEdit, dgvDel });
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Janna LT", 10.1999989F);
@@ -235,7 +210,7 @@
             dataGridView1.RightToLeft = RightToLeft.Yes;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 39;
-            dataGridView1.Size = new Size(1395, 541);
+            dataGridView1.Size = new Size(1554, 541);
             dataGridView1.TabIndex = 9;
             // 
             // Column1
@@ -294,12 +269,12 @@
             dgvSupplier.Name = "dgvSupplier";
             dgvSupplier.Width = 175;
             // 
-            // dgvUnit
+            // dgvQty
             // 
-            dgvUnit.HeaderText = "الكمية المتوفرة";
-            dgvUnit.MinimumWidth = 6;
-            dgvUnit.Name = "dgvUnit";
-            dgvUnit.Width = 150;
+            dgvQty.HeaderText = "الكمية المتوفرة";
+            dgvQty.MinimumWidth = 6;
+            dgvQty.Name = "dgvQty";
+            dgvQty.Width = 150;
             // 
             // dgvUnitID
             // 
@@ -309,12 +284,12 @@
             dgvUnitID.Visible = false;
             dgvUnitID.Width = 125;
             // 
-            // Unit
+            // dgvUnit
             // 
-            Unit.HeaderText = "الوحدة";
-            Unit.MinimumWidth = 6;
-            Unit.Name = "Unit";
-            Unit.Width = 125;
+            dgvUnit.HeaderText = "الوحدة";
+            dgvUnit.MinimumWidth = 6;
+            dgvUnit.Name = "dgvUnit";
+            dgvUnit.Width = 125;
             // 
             // dgvUnitPrice
             // 
@@ -354,7 +329,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1401, 667);
+            ClientSize = new Size(1560, 667);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "StockList";
@@ -391,9 +366,9 @@
         private DataGridViewTextBoxColumn dgvCategory;
         private DataGridViewTextBoxColumn dgvSupplierID;
         private DataGridViewTextBoxColumn dgvSupplier;
-        private DataGridViewTextBoxColumn dgvUnit;
+        private DataGridViewTextBoxColumn dgvQty;
         private DataGridViewTextBoxColumn dgvUnitID;
-        private DataGridViewTextBoxColumn Unit;
+        private DataGridViewTextBoxColumn dgvUnit;
         private DataGridViewTextBoxColumn dgvUnitPrice;
         private DataGridViewTextBoxColumn dgvSalesPrice;
         private DataGridViewImageColumn dgvEdit;

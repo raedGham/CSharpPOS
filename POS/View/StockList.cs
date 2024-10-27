@@ -19,7 +19,11 @@ namespace POS.View
 
         public void GetData()
         {
-            string qry = "Select I.ID, Description,  C.[Category Description], C.ID, [Sales Price]  from [Sales Items] as I inner join [Sitems Categories] as C on C.ID = I.CategoryID  where Description like '%" + txtSearch.Text + "%' ";
+            string qry = "Select I.ID, I.Description,  I.CategoryID,C.[Category Description] ,I.[Prefered Supplier ID] ,S.SupplierName ,I.[Avail Qty], I.UnitID,U.Description, [Unit Price], [Sales Price]  from [stock Items] as I " +
+                       "inner join [Stock Categories] as C on I.CategoryID = C.ID  " +
+                       "left join [Suppliers] as S on I.[Prefered Supplier ID]= S.ID  " +
+                        "inner join [Units] as U on  I.UnitID = U.ID " + 
+                         "where I.Description like '%" + txtSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvDescription);
@@ -27,9 +31,11 @@ namespace POS.View
             lb.Items.Add(dgvCategory);
             lb.Items.Add(dgvSupplierID);
             lb.Items.Add(dgvSupplier);
+            lb.Items.Add(dgvQty);
             lb.Items.Add(dgvUnitID);
             lb.Items.Add(dgvUnit);
-            lb.Items.Add(dgvPrice);
+            lb.Items.Add(dgvUnitPrice);
+            lb.Items.Add(dgvSalesPrice);
 
 
             MainClass.LoadData(qry, dataGridView1, lb);
@@ -39,17 +45,17 @@ namespace POS.View
         {
             Model.AddStock addStock = new Model.AddStock();
             addStock.ShowDialog();
-            // GetData();
+            GetData();
         }
 
         private void StockList_Load(object sender, EventArgs e)
         {
-
+            GetData();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            GetData();
         }
     }
 }
