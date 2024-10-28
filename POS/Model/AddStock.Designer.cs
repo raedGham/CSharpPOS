@@ -50,9 +50,11 @@
             label7 = new Label();
             txtSalesPrice = new TextBox();
             label8 = new Label();
-            dtExpiryDate = new TextBox();
             label9 = new Label();
             txtReorder = new TextBox();
+            txtBarcode = new TextBox();
+            label10 = new Label();
+            dtExpiryDate1 = new DateTimePicker();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -115,6 +117,7 @@
             btnSave.TextAlign = ContentAlignment.MiddleLeft;
             btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnClose
             // 
@@ -136,7 +139,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(965, 192);
+            label1.Location = new Point(970, 234);
             label1.Name = "label1";
             label1.Size = new Size(87, 31);
             label1.TabIndex = 26;
@@ -145,7 +148,7 @@
             // txtDescription
             // 
             txtDescription.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(371, 192);
+            txtDescription.Location = new Point(376, 234);
             txtDescription.Name = "txtDescription";
             txtDescription.RightToLeft = RightToLeft.Yes;
             txtDescription.Size = new Size(575, 39);
@@ -155,7 +158,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(243, 197);
+            label2.Location = new Point(248, 239);
             label2.Name = "label2";
             label2.Size = new Size(90, 31);
             label2.TabIndex = 28;
@@ -164,7 +167,7 @@
             // txtUnitPrice
             // 
             txtUnitPrice.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUnitPrice.Location = new Point(56, 189);
+            txtUnitPrice.Location = new Point(61, 231);
             txtUnitPrice.Name = "txtUnitPrice";
             txtUnitPrice.RightToLeft = RightToLeft.Yes;
             txtUnitPrice.Size = new Size(172, 39);
@@ -174,7 +177,7 @@
             // 
             cbCategory.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbCategory.FormattingEnabled = true;
-            cbCategory.Location = new Point(617, 283);
+            cbCategory.Location = new Point(622, 325);
             cbCategory.Margin = new Padding(3, 4, 3, 4);
             cbCategory.Name = "cbCategory";
             cbCategory.RightToLeft = RightToLeft.Yes;
@@ -185,7 +188,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(487, 291);
+            label3.Location = new Point(492, 333);
             label3.Name = "label3";
             label3.Size = new Size(115, 31);
             label3.TabIndex = 32;
@@ -194,7 +197,7 @@
             // txtQty
             // 
             txtQty.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtQty.Location = new Point(371, 283);
+            txtQty.Location = new Point(376, 325);
             txtQty.Name = "txtQty";
             txtQty.RightToLeft = RightToLeft.Yes;
             txtQty.Size = new Size(110, 39);
@@ -204,7 +207,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(1006, 286);
+            label4.Location = new Point(1011, 328);
             label4.Name = "label4";
             label4.Size = new Size(46, 31);
             label4.TabIndex = 33;
@@ -214,7 +217,7 @@
             // 
             cbUnit.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbUnit.FormattingEnabled = true;
-            cbUnit.Location = new Point(56, 283);
+            cbUnit.Location = new Point(61, 325);
             cbUnit.Margin = new Padding(3, 4, 3, 4);
             cbUnit.Name = "cbUnit";
             cbUnit.RightToLeft = RightToLeft.Yes;
@@ -225,7 +228,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(275, 291);
+            label5.Location = new Point(280, 333);
             label5.Name = "label5";
             label5.Size = new Size(56, 31);
             label5.TabIndex = 35;
@@ -235,7 +238,7 @@
             // 
             cbSupplier.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbSupplier.FormattingEnabled = true;
-            cbSupplier.Location = new Point(371, 374);
+            cbSupplier.Location = new Point(376, 416);
             cbSupplier.Margin = new Padding(3, 4, 3, 4);
             cbSupplier.Name = "cbSupplier";
             cbSupplier.RightToLeft = RightToLeft.Yes;
@@ -246,7 +249,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(1006, 382);
+            label6.Location = new Point(1011, 424);
             label6.Name = "label6";
             label6.Size = new Size(47, 31);
             label6.TabIndex = 37;
@@ -256,7 +259,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(243, 382);
+            label7.Location = new Point(248, 424);
             label7.Name = "label7";
             label7.Size = new Size(88, 31);
             label7.TabIndex = 39;
@@ -265,7 +268,7 @@
             // txtSalesPrice
             // 
             txtSalesPrice.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSalesPrice.Location = new Point(56, 374);
+            txtSalesPrice.Location = new Point(61, 416);
             txtSalesPrice.Name = "txtSalesPrice";
             txtSalesPrice.RightToLeft = RightToLeft.Yes;
             txtSalesPrice.Size = new Size(172, 39);
@@ -275,26 +278,17 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(949, 471);
+            label8.Location = new Point(954, 513);
             label8.Name = "label8";
             label8.Size = new Size(103, 31);
             label8.TabIndex = 41;
             label8.Text = "تاريخ الصلاحية";
             // 
-            // dtExpiryDate
-            // 
-            dtExpiryDate.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtExpiryDate.Location = new Point(774, 463);
-            dtExpiryDate.Name = "dtExpiryDate";
-            dtExpiryDate.RightToLeft = RightToLeft.Yes;
-            dtExpiryDate.Size = new Size(172, 39);
-            dtExpiryDate.TabIndex = 40;
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(487, 466);
+            label9.Location = new Point(492, 508);
             label9.Name = "label9";
             label9.Size = new Size(127, 31);
             label9.TabIndex = 43;
@@ -303,21 +297,43 @@
             // txtReorder
             // 
             txtReorder.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtReorder.Location = new Point(371, 463);
+            txtReorder.Location = new Point(376, 505);
             txtReorder.Name = "txtReorder";
             txtReorder.RightToLeft = RightToLeft.Yes;
             txtReorder.Size = new Size(110, 39);
             txtReorder.TabIndex = 42;
+            // 
+            // txtBarcode
+            // 
+            txtBarcode.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBarcode.Location = new Point(705, 158);
+            txtBarcode.Name = "txtBarcode";
+            txtBarcode.RightToLeft = RightToLeft.Yes;
+            txtBarcode.Size = new Size(246, 39);
+            txtBarcode.TabIndex = 44;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(982, 166);
+            label10.Name = "label10";
+            label10.Size = new Size(76, 31);
+            label10.TabIndex = 45;
+            label10.Text = "Barcode";
+           
             // 
             // AddStock
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1105, 697);
+            Controls.Add(dtExpiryDate);
+            Controls.Add(label10);
+            Controls.Add(txtBarcode);
             Controls.Add(label9);
             Controls.Add(txtReorder);
             Controls.Add(label8);
-            Controls.Add(dtExpiryDate);
             Controls.Add(label7);
             Controls.Add(txtSalesPrice);
             Controls.Add(label6);
@@ -336,6 +352,7 @@
             Controls.Add(panel1);
             Name = "AddStock";
             Text = "AddStock";
+            Load += AddStock_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -370,5 +387,8 @@
         public TextBox dtExpiryDate;
         private Label label9;
         public TextBox txtReorder;
+        public TextBox txtBarcode;
+        private Label label10;
+        private DateTimePicker dtExpiryDate1;
     }
 }

@@ -69,8 +69,6 @@
             panel2.BackColor = Color.MidnightBlue;
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(label5);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(txtSearch);
             panel2.Controls.Add(btnNew);
@@ -105,7 +103,6 @@
             label5.Size = new Size(145, 52);
             label5.TabIndex = 10;
             label5.Text = "لائحة المواد";
-         
             // 
             // label2
             // 
@@ -212,6 +209,7 @@
             dataGridView1.RowTemplate.Height = 39;
             dataGridView1.Size = new Size(1554, 541);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
