@@ -104,6 +104,7 @@
             btnAddClient.TabIndex = 4;
             btnAddClient.Text = "إضافة";
             btnAddClient.UseVisualStyleBackColor = true;
+            btnAddClient.Click += btnAddClient_Click;
             // 
             // panel2
             // 

@@ -16,5 +16,11 @@ namespace POS
         {
             InitializeComponent();
         }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            SalesInvoice.SalesInvoice addSales = new SalesInvoice.SalesInvoice();
+            addSales.ShowDialog();
+        }
     }
 }

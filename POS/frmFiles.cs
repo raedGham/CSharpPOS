@@ -30,6 +30,8 @@ namespace POS
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
+            Model.AddClient addClient = new Model.AddClient();
+            addClient.ShowDialog();
         }
 
         private void btnListClient_Click(object sender, EventArgs e)
@@ -90,6 +92,54 @@ namespace POS
         {
             View.ItemList frm = new View.ItemList();
             frm.Show();
+        }
+
+        private void btnAddIngredient_Click(object sender, EventArgs e)
+        {
+            Model.AddIngredient addIngredient = new Model.AddIngredient();
+            addIngredient.ShowDialog();
+        }
+
+        private void btnAddItemCatg_Click(object sender, EventArgs e)
+        {
+            Model.AddItemCatg addItemCatg = new Model.AddItemCatg();
+            addItemCatg.ShowDialog();
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            Model.AddItem addItem = new Model.AddItem();
+            addItem.ShowDialog();
+        }
+
+        private void btnAddDelivery_Click(object sender, EventArgs e)
+        {
+            Model.AddStaff addStaff = new Model.AddStaff();
+            addStaff.ShowDialog();
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            Model.AddStockCatg addStockCatg = new Model.AddStockCatg();
+            addStockCatg.ShowDialog();
+        }
+
+        private void btnAddStock_Click(object sender, EventArgs e)
+        {
+            Model.AddStock addStock = new Model.AddStock();
+            addStock.ShowDialog();
+        }
+
+        private void btnAddSupplier_Click(object sender, EventArgs e)
+        {
+            Model.AddSupplier addSupplier = new Model.AddSupplier();
+            addSupplier.ShowDialog();
+        }
+
+        private void btnAddUnit_Click(object sender, EventArgs e)
+        {
+            Model.AddUnit addUnit = new Model.AddUnit();
+            addUnit.ShowDialog();
         }
     }
 }
