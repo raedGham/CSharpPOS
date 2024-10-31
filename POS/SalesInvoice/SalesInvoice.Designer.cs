@@ -79,6 +79,12 @@
             btn2 = new Button();
             btn1 = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            dgvID = new DataGridViewTextBoxColumn();
+            dgvItemID = new DataGridViewTextBoxColumn();
+            dgvItemDescription = new DataGridViewTextBoxColumn();
+            dgvQty = new DataGridViewTextBoxColumn();
+            dgvPrice = new DataGridViewTextBoxColumn();
+            dgvAmount = new DataGridViewTextBoxColumn();
             HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             InvoicePanel.SuspendLayout();
@@ -122,7 +128,7 @@
             ProductPanel.Location = new Point(-1, 78);
             ProductPanel.Name = "ProductPanel";
             ProductPanel.RightToLeft = RightToLeft.Yes;
-            ProductPanel.Size = new Size(908, 637);
+            ProductPanel.Size = new Size(907, 637);
             ProductPanel.TabIndex = 1;
             // 
             // InvoicePanel
@@ -171,9 +177,9 @@
             label2.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(3, 108);
             label2.Name = "label2";
-            label2.Size = new Size(336, 24);
+            label2.Size = new Size(324, 24);
             label2.TabIndex = 34;
-            label2.Text = "الكمية                       الصنف              السعر                       الإجمالي";
+            label2.Text = "الكمية                   الصنف              السعر                       الإجمالي";
             // 
             // button10
             // 
@@ -492,10 +498,13 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvItemID, dgvItemDescription, dgvQty, dgvPrice, dgvAmount });
             dataGridView1.Location = new Point(1, 135);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(340, 364);
+            dataGridView1.Size = new Size(365, 364);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // FooterPanel
             // 
@@ -694,6 +703,43 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
+            // dgvID
+            // 
+            dgvID.HeaderText = "";
+            dgvID.Name = "dgvID";
+            dgvID.Visible = false;
+            // 
+            // dgvItemID
+            // 
+            dgvItemID.HeaderText = "";
+            dgvItemID.Name = "dgvItemID";
+            dgvItemID.Visible = false;
+            dgvItemID.Width = 20;
+            // 
+            // dgvItemDescription
+            // 
+            dgvItemDescription.HeaderText = "";
+            dgvItemDescription.Name = "dgvItemDescription";
+            dgvItemDescription.Width = 140;
+            // 
+            // dgvQty
+            // 
+            dgvQty.HeaderText = "";
+            dgvQty.Name = "dgvQty";
+            dgvQty.Width = 20;
+            // 
+            // dgvPrice
+            // 
+            dgvPrice.HeaderText = "";
+            dgvPrice.Name = "dgvPrice";
+            dgvPrice.Width = 60;
+            // 
+            // dgvAmount
+            // 
+            dgvAmount.HeaderText = "";
+            dgvAmount.Name = "dgvAmount";
+            dgvAmount.Width = 60;
+            // 
             // SalesInvoice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -770,5 +816,11 @@
         private Label lblSelectedItem;
         private Label lblSelectedQty;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private DataGridViewTextBoxColumn dgvID;
+        private DataGridViewTextBoxColumn dgvItemID;
+        private DataGridViewTextBoxColumn dgvItemDescription;
+        private DataGridViewTextBoxColumn dgvQty;
+        private DataGridViewTextBoxColumn dgvPrice;
+        private DataGridViewTextBoxColumn dgvAmount;
     }
 }

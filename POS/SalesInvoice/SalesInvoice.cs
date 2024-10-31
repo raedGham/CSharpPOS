@@ -119,28 +119,28 @@ namespace POS.SalesInvoice
             w.Visible = false;
             ProductPanel.Controls.Add(w);
 
-            //w.onSelect += (ss, ee) =>
-            //{
-            //    var wdg = (ucProduct)ss;
+            w.onSelect += (ss, ee) =>
+            {
+                var wdg = (ucProduct)ss;
 
-            //    foreach (DataGridViewRow item in dataGridView1.Rows)
-            //    {
-            //        // this will check if the product is already there then a one is added to its quantity
-            //        if (Convert.ToInt32(item.Cells["dgvProID"].Value) == wdg.id)
-            //        {
-            //            item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
-            //            item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
-            //                                            double.Parse(item.Cells["dgvPrice"].Value.ToString());
-            //            GetTotal();
-            //            return;
-            //        }
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                    // this will check if the product is already there then a one is added to its quantity
+                    if (Convert.ToInt32(item.Cells["dgvItemID"].Value) == wdg.id)
+                    {
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
+                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
+                                                        double.Parse(item.Cells["dgvPrice"].Value.ToString());
+                       GetTotal();
+                        return;
+                    }
 
 
-            //    }
-            //   // this line will add a new product , first 0 is for sn and second 0 is for id
-            //    dataGridView1.Rows.Add(new Object[] { 0, 0, wdg.id, wdg.Pname, 1, wdg.Pprice, wdg.Pprice });
-            //    GetTotal();
-            //};
+                }
+                // this line will add a new product , first 0 is for sn and second 0 is for id
+                dataGridView1.Rows.Add(new Object[] {0, wdg.id, wdg.Pname, 1,wdg.Pprice, wdg.Pprice });
+           //     GetTotal();
+            };
         }
 
         private void InvoicePanel_Paint(object sender, PaintEventArgs e)
@@ -160,6 +160,24 @@ namespace POS.SalesInvoice
 
         private void lblSelectedQty_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GetTotal()
+        {
+            double tot = 0;
+            lblTotal.Text = "";
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                tot += double.Parse(row.Cells["dgvAmount"].Value.ToString());
+            }
+            lblTotal.Text = tot.ToString();
+
 
         }
     }
