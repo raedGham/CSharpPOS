@@ -680,9 +680,9 @@
             lblSelectedQty.ForeColor = SystemColors.ControlText;
             lblSelectedQty.Location = new Point(655, 25);
             lblSelectedQty.Name = "lblSelectedQty";
-            lblSelectedQty.Size = new Size(50, 47);
+            lblSelectedQty.Size = new Size(36, 47);
             lblSelectedQty.TabIndex = 31;
-            lblSelectedQty.Text = "99";
+            lblSelectedQty.Text = "1";
             lblSelectedQty.Click += lblSelectedQty_Click;
             // 
             // btnQtyUp
@@ -698,6 +698,7 @@
             btnQtyUp.TabIndex = 30;
             btnQtyUp.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnQtyUp.UseVisualStyleBackColor = true;
+            btnQtyUp.Click += btnQtyUp_Click;
             // 
             // btnQtyDn
             // 
@@ -712,6 +713,7 @@
             btnQtyDn.TabIndex = 29;
             btnQtyDn.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnQtyDn.UseVisualStyleBackColor = true;
+            btnQtyDn.Click += btnQtyDn_Click;
             // 
             // lblSelectedItem
             // 
@@ -737,6 +739,7 @@
             btn9.Text = "9";
             btn9.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btn9_Click;
             // 
             // btn8
             // 
@@ -751,6 +754,7 @@
             btn8.Text = "8";
             btn8.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btn8_Click;
             // 
             // btn7
             // 
@@ -765,6 +769,7 @@
             btn7.Text = "7";
             btn7.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btn7_Click;
             // 
             // btn6
             // 
@@ -779,6 +784,7 @@
             btn6.Text = "6";
             btn6.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btn6_Click;
             // 
             // btn5
             // 
@@ -793,6 +799,7 @@
             btn5.Text = "5";
             btn5.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btn5_Click;
             // 
             // btn4
             // 
@@ -807,6 +814,7 @@
             btn4.Text = "4";
             btn4.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
             // 
             // btn3
             // 
@@ -821,6 +829,7 @@
             btn3.Text = "3";
             btn3.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btn3_Click;
             // 
             // btn2
             // 
@@ -835,6 +844,7 @@
             btn2.Text = "2";
             btn2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
             // 
             // btn1
             // 
@@ -869,7 +879,7 @@
             Name = "SalesInvoice";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
-            Text = "SalesInvoice";
+            Text = "git add ";
             Load += SalesInvoice_Load;
             HeaderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

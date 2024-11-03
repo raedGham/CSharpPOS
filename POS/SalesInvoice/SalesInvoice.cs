@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -170,10 +171,7 @@ namespace POS.SalesInvoice
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void lblSelectedQty_Click(object sender, EventArgs e)
         {
@@ -195,7 +193,7 @@ namespace POS.SalesInvoice
             }
             lblTotal.Text = tot.ToString("N0");
 
-          
+
         }
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -208,6 +206,80 @@ namespace POS.SalesInvoice
                 row.Cells[0].Value = count;
 
             }
+        }
+
+
+
+        private void setQty(int qty)
+        {
+            if (dataGridView1.SelectedRows.Count != 0 || dataGridView1.Rows.Count > 0)
+            {
+                int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+                int qtyColumnIndex = dataGridView1.Columns["dgvQty"].Index;
+                dataGridView1.Rows[selectedRowIndex].Cells[qtyColumnIndex].Value = qty;
+            }
+
+        }
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            setQty(9);
+        }
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            setQty(8);
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            setQty(7);
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            setQty(6);
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            setQty(5);
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            setQty(4);
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            setQty(3);
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            setQty(2);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            setQty(1);
+        }
+
+        private void btnQtyUp_Click(object sender, EventArgs e)
+        {
+            int qty = Convert.ToInt32(lblSelectedQty.Text);
+            qty++;
+            lblSelectedQty.Text = Convert.ToString(qty);
+            setQty(qty);
+
+        }
+
+        private void btnQtyDn_Click(object sender, EventArgs e)
+        {
+            int qty = Convert.ToInt32(lblSelectedQty.Text);
+            qty--;
+            if (qty<1) {  qty = 1; }
+            lblSelectedQty.Text = Convert.ToString(qty);
+            setQty(qty);
+
         }
     }
 }
