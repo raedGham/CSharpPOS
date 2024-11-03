@@ -28,9 +28,25 @@ namespace POS.SalesInvoice
 
             ProductPanel.Controls.Clear();
             LoadProducts();
+
+            // for cb fill
+            string qry = "select ID  'id', [Person Name] 'name' from [Delivery Persons] ";
+            MainClass.CBFill(qry, cbDelivery);
+            //if (catID > 0) //For update
+            //{
+            //    cbCategory.SelectedValue = catID;
+
+            //}
+
+            // for cb fill
+            string qry2 = "select ID  'id', ClientName 'name' from Clients ";
+            MainClass.CBFill(qry2, cbClient);
+            //if (catID > 0) //For update
+            //{
+            //    cbCategory.SelectedValue = catID;
+
+            //}
         }
-
-
         private void AddCategory()
         {
             string qry = "select * from [Sitems Categories]";
@@ -107,6 +123,7 @@ namespace POS.SalesInvoice
 
         private void AddItems(string id, string ProductID, string name, string cat, string price, Image pimage)
         {
+            dataGridView1.AllowUserToAddRows = false;
             var w = new ucProduct()
             {
                 Pname = name,
@@ -131,15 +148,15 @@ namespace POS.SalesInvoice
                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
                                                         double.Parse(item.Cells["dgvPrice"].Value.ToString());
-                       GetTotal();
+                        GetTotal();
                         return;
                     }
 
 
                 }
                 // this line will add a new product , first 0 is for sn and second 0 is for id
-                dataGridView1.Rows.Add(new Object[] {0, wdg.id, wdg.Pname, 1,wdg.Pprice, wdg.Pprice });
-           //     GetTotal();
+                dataGridView1.Rows.Add(new Object[] { 0, 0, wdg.id, wdg.Pname, 1, wdg.Pprice, wdg.Pprice });
+                GetTotal();
             };
         }
 
@@ -176,9 +193,21 @@ namespace POS.SalesInvoice
             {
                 tot += double.Parse(row.Cells["dgvAmount"].Value.ToString());
             }
-            lblTotal.Text = tot.ToString();
+            lblTotal.Text = tot.ToString("N0");
 
+          
+        }
 
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int count = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                count++;
+                row.Cells[0].Value = count;
+
+            }
         }
     }
 }
