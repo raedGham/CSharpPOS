@@ -70,6 +70,7 @@
             btnListClient.TabIndex = 7;
             btnListClient.Text = "لائحة";
             btnListClient.UseVisualStyleBackColor = true;
+            btnListClient.Click += btnListClient_Click;
             // 
             // pictureBox1
             // 

@@ -22,5 +22,11 @@ namespace POS
             SalesInvoice.SalesInvoice addSales = new SalesInvoice.SalesInvoice();
             addSales.ShowDialog();
         }
+
+        private void btnListClient_Click(object sender, EventArgs e)
+        {
+            SalesInvoice.SalesInvoiceList listSales = new SalesInvoice.SalesInvoiceList();
+            listSales.ShowDialog();
+        }
     }
 }

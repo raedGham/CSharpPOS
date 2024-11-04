@@ -276,10 +276,21 @@ namespace POS.SalesInvoice
         {
             int qty = Convert.ToInt32(lblSelectedQty.Text);
             qty--;
-            if (qty<1) {  qty = 1; }
+            if (qty < 1) { qty = 1; }
             lblSelectedQty.Text = Convert.ToString(qty);
             setQty(qty);
 
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            InvoiceOps.AddInvoice(Convert.ToDouble(lblTotal.Text), 1, Convert.ToInt32(cbDelivery.SelectedValue), Convert.ToDateTime(txtDeliveryTime.Text),
+                                 Convert.ToInt32(cbClient.SelectedValue), 0, 0, false);
         }
     }
 }
