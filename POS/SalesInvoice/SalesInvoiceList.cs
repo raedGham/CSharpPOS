@@ -27,7 +27,8 @@ namespace POS.SalesInvoice
 
         public void GetData()
         {
-            string qry = "Select * from [Sales Invoice] ";
+            string qry = "Select ID, [Invoice Date], [Invoice Time], Total, Paid, Discount, Type, [Delivery Person ID]," +
+                         " [Delivery Time] , ClientID, Printed, CashIN, CashOUT, SlipWI, Delivered from [Sales Invoice] ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvInvDate);

@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesInvoiceList));
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            label2 = new Label();
+            txtSearch = new TextBox();
+            btnNew = new Button();
+            lblRecords = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            lblTitle = new Label();
             Column1 = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvInvDate = new DataGridViewTextBoxColumn();
@@ -52,16 +63,6 @@
             dgvDelivered = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
-            panel2 = new Panel();
-            label3 = new Label();
-            pictureBox2 = new PictureBox();
-            label2 = new Label();
-            txtSearch = new TextBox();
-            btnNew = new Button();
-            lblRecords = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            lblTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -73,143 +74,28 @@
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, dgvID, dgvInvDate, dgvInvTime, dgvTotal, dgvPaid, dgvDiscount, dgvType, dgvDeliveryID, dgvDeliveryTime, dgvClientID, dgvPrinted, dgvCashIN, dgvCashOUT, dgvSlipWI, dgvDelivered, dgvEdit, dgvDel });
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Window;
-            dataGridViewCellStyle7.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Location = new Point(0, 82);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Control;
-            dataGridViewCellStyle8.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 39;
             dataGridView1.Size = new Size(1480, 563);
             dataGridView1.TabIndex = 3;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Sn";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Resizable = DataGridViewTriState.True;
-            Column1.Width = 30;
-            // 
-            // dgvID
-            // 
-            dataGridViewCellStyle5.Font = new Font("Janna LT", 10.1999989F);
-            dgvID.DefaultCellStyle = dataGridViewCellStyle5;
-            dgvID.HeaderText = "الرمز";
-            dgvID.MinimumWidth = 6;
-            dgvID.Name = "dgvID";
-            dgvID.Width = 70;
-            // 
-            // dgvInvDate
-            // 
-            dataGridViewCellStyle6.Font = new Font("Janna LT", 10.1999989F);
-            dgvInvDate.DefaultCellStyle = dataGridViewCellStyle6;
-            dgvInvDate.HeaderText = "التاريخ";
-            dgvInvDate.MinimumWidth = 6;
-            dgvInvDate.Name = "dgvInvDate";
-            dgvInvDate.Width = 80;
-            // 
-            // dgvInvTime
-            // 
-            dgvInvTime.HeaderText = "الوقت";
-            dgvInvTime.MinimumWidth = 6;
-            dgvInvTime.Name = "dgvInvTime";
-            dgvInvTime.Width = 80;
-            // 
-            // dgvTotal
-            // 
-            dgvTotal.HeaderText = "الاجمالي";
-            dgvTotal.MinimumWidth = 6;
-            dgvTotal.Name = "dgvTotal";
-            dgvTotal.Width = 125;
-            // 
-            // dgvPaid
-            // 
-            dgvPaid.HeaderText = "مدفوع";
-            dgvPaid.Name = "dgvPaid";
-            // 
-            // dgvDiscount
-            // 
-            dgvDiscount.HeaderText = "حسم";
-            dgvDiscount.Name = "dgvDiscount";
-            // 
-            // dgvType
-            // 
-            dgvType.HeaderText = "النوع";
-            dgvType.Name = "dgvType";
-            // 
-            // dgvDeliveryID
-            // 
-            dgvDeliveryID.HeaderText = "رمز العامل";
-            dgvDeliveryID.Name = "dgvDeliveryID";
-            // 
-            // dgvDeliveryTime
-            // 
-            dgvDeliveryTime.HeaderText = "وقت التوصيل";
-            dgvDeliveryTime.Name = "dgvDeliveryTime";
-            // 
-            // dgvClientID
-            // 
-            dgvClientID.HeaderText = "رمز الزبون";
-            dgvClientID.Name = "dgvClientID";
-            // 
-            // dgvPrinted
-            // 
-            dgvPrinted.HeaderText = "طبعت";
-            dgvPrinted.Name = "dgvPrinted";
-            // 
-            // dgvCashIN
-            // 
-            dgvCashIN.HeaderText = "كاش داخل";
-            dgvCashIN.Name = "dgvCashIN";
-            // 
-            // dgvCashOUT
-            // 
-            dgvCashOUT.HeaderText = "كاش خارج";
-            dgvCashOUT.Name = "dgvCashOUT";
-            // 
-            // dgvSlipWI
-            // 
-            dgvSlipWI.HeaderText = "SlipWI";
-            dgvSlipWI.Name = "dgvSlipWI";
-            // 
-            // dgvDelivered
-            // 
-            dgvDelivered.HeaderText = "طبعت";
-            dgvDelivered.Name = "dgvDelivered";
-            // 
-            // dgvEdit
-            // 
-            dgvEdit.HeaderText = "Edit";
-            dgvEdit.Image = (Image)resources.GetObject("dgvEdit.Image");
-            dgvEdit.MinimumWidth = 6;
-            dgvEdit.Name = "dgvEdit";
-            dgvEdit.Resizable = DataGridViewTriState.True;
-            dgvEdit.SortMode = DataGridViewColumnSortMode.Automatic;
-            dgvEdit.Width = 50;
-            // 
-            // dgvDel
-            // 
-            dgvDel.HeaderText = "Del";
-            dgvDel.Image = (Image)resources.GetObject("dgvDel.Image");
-            dgvDel.MinimumWidth = 6;
-            dgvDel.Name = "dgvDel";
-            dgvDel.Resizable = DataGridViewTriState.True;
-            dgvDel.SortMode = DataGridViewColumnSortMode.Automatic;
-            dgvDel.Width = 50;
             // 
             // panel2
             // 
@@ -235,9 +121,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Janna LT", 16.1999989F);
             label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(1200, 23);
+            label3.Location = new Point(1148, 16);
             label3.Name = "label3";
-            label3.Size = new Size(179, 41);
+            label3.Size = new Size(212, 52);
             label3.TabIndex = 7;
             label3.Text = "لائحة فواتير المبيع";
             // 
@@ -259,7 +145,7 @@
             label2.ForeColor = Color.Gainsboro;
             label2.Location = new Point(435, 30);
             label2.Name = "label2";
-            label2.Size = new Size(37, 26);
+            label2.Size = new Size(44, 31);
             label2.TabIndex = 5;
             label2.Text = "بحث";
             // 
@@ -268,7 +154,7 @@
             txtSearch.Font = new Font("Janna LT", 10.1999989F);
             txtSearch.Location = new Point(206, 27);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(223, 33);
+            txtSearch.Size = new Size(223, 39);
             txtSearch.TabIndex = 4;
             // 
             // btnNew
@@ -291,7 +177,7 @@
             lblRecords.ForeColor = Color.Gainsboro;
             lblRecords.Location = new Point(45, 33);
             lblRecords.Name = "lblRecords";
-            lblRecords.Size = new Size(17, 19);
+            lblRecords.Size = new Size(20, 23);
             lblRecords.TabIndex = 3;
             lblRecords.Text = "0";
             // 
@@ -302,7 +188,7 @@
             label1.ForeColor = Color.Gainsboro;
             label1.Location = new Point(68, 30);
             label1.Name = "label1";
-            label1.Size = new Size(88, 26);
+            label1.Size = new Size(102, 31);
             label1.TabIndex = 2;
             label1.Text = "عدد السجلات";
             // 
@@ -325,13 +211,153 @@
             lblTitle.ForeColor = Color.Gainsboro;
             lblTitle.Location = new Point(2107, 45);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(122, 41);
+            lblTitle.Size = new Size(144, 52);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "لائحة الزبائن";
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Sn";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Resizable = DataGridViewTriState.True;
+            Column1.Width = 30;
+            // 
+            // dgvID
+            // 
+            dataGridViewCellStyle1.Font = new Font("Janna LT", 10.1999989F);
+            dgvID.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvID.HeaderText = "الرمز";
+            dgvID.MinimumWidth = 6;
+            dgvID.Name = "dgvID";
+            dgvID.Width = 70;
+            // 
+            // dgvInvDate
+            // 
+            dataGridViewCellStyle2.Font = new Font("Janna LT", 10.1999989F);
+            dgvInvDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvInvDate.HeaderText = "التاريخ";
+            dgvInvDate.MinimumWidth = 6;
+            dgvInvDate.Name = "dgvInvDate";
+            dgvInvDate.Width = 120;
+            // 
+            // dgvInvTime
+            // 
+            dataGridViewCellStyle3.Format = "t";
+            dataGridViewCellStyle3.NullValue = null;
+            dgvInvTime.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvInvTime.HeaderText = "الوقت";
+            dgvInvTime.MinimumWidth = 6;
+            dgvInvTime.Name = "dgvInvTime";
+            dgvInvTime.Width = 120;
+            // 
+            // dgvTotal
+            // 
+            dgvTotal.HeaderText = "الاجمالي";
+            dgvTotal.MinimumWidth = 6;
+            dgvTotal.Name = "dgvTotal";
+            dgvTotal.Width = 125;
+            // 
+            // dgvPaid
+            // 
+            dgvPaid.HeaderText = "مدفوع";
+            dgvPaid.MinimumWidth = 6;
+            dgvPaid.Name = "dgvPaid";
+            dgvPaid.Width = 125;
+            // 
+            // dgvDiscount
+            // 
+            dgvDiscount.HeaderText = "حسم";
+            dgvDiscount.MinimumWidth = 6;
+            dgvDiscount.Name = "dgvDiscount";
+            dgvDiscount.Width = 125;
+            // 
+            // dgvType
+            // 
+            dgvType.HeaderText = "النوع";
+            dgvType.MinimumWidth = 6;
+            dgvType.Name = "dgvType";
+            dgvType.Width = 125;
+            // 
+            // dgvDeliveryID
+            // 
+            dgvDeliveryID.HeaderText = "رمز العامل";
+            dgvDeliveryID.MinimumWidth = 6;
+            dgvDeliveryID.Name = "dgvDeliveryID";
+            dgvDeliveryID.Width = 125;
+            // 
+            // dgvDeliveryTime
+            // 
+            dgvDeliveryTime.HeaderText = "وقت التوصيل";
+            dgvDeliveryTime.MinimumWidth = 6;
+            dgvDeliveryTime.Name = "dgvDeliveryTime";
+            dgvDeliveryTime.Width = 125;
+            // 
+            // dgvClientID
+            // 
+            dgvClientID.HeaderText = "رمز الزبون";
+            dgvClientID.MinimumWidth = 6;
+            dgvClientID.Name = "dgvClientID";
+            dgvClientID.Width = 125;
+            // 
+            // dgvPrinted
+            // 
+            dgvPrinted.HeaderText = "طبعت";
+            dgvPrinted.MinimumWidth = 6;
+            dgvPrinted.Name = "dgvPrinted";
+            dgvPrinted.Width = 125;
+            // 
+            // dgvCashIN
+            // 
+            dgvCashIN.HeaderText = "كاش داخل";
+            dgvCashIN.MinimumWidth = 6;
+            dgvCashIN.Name = "dgvCashIN";
+            dgvCashIN.Width = 125;
+            // 
+            // dgvCashOUT
+            // 
+            dgvCashOUT.HeaderText = "كاش خارج";
+            dgvCashOUT.MinimumWidth = 6;
+            dgvCashOUT.Name = "dgvCashOUT";
+            dgvCashOUT.Width = 125;
+            // 
+            // dgvSlipWI
+            // 
+            dgvSlipWI.HeaderText = "SlipWI";
+            dgvSlipWI.MinimumWidth = 6;
+            dgvSlipWI.Name = "dgvSlipWI";
+            dgvSlipWI.Width = 125;
+            // 
+            // dgvDelivered
+            // 
+            dgvDelivered.HeaderText = "تم التوصيل";
+            dgvDelivered.MinimumWidth = 6;
+            dgvDelivered.Name = "dgvDelivered";
+            dgvDelivered.Width = 125;
+            // 
+            // dgvEdit
+            // 
+            dgvEdit.HeaderText = "Edit";
+            dgvEdit.Image = (Image)resources.GetObject("dgvEdit.Image");
+            dgvEdit.MinimumWidth = 6;
+            dgvEdit.Name = "dgvEdit";
+            dgvEdit.Resizable = DataGridViewTriState.True;
+            dgvEdit.SortMode = DataGridViewColumnSortMode.Automatic;
+            dgvEdit.Width = 50;
+            // 
+            // dgvDel
+            // 
+            dgvDel.HeaderText = "Del";
+            dgvDel.Image = (Image)resources.GetObject("dgvDel.Image");
+            dgvDel.MinimumWidth = 6;
+            dgvDel.Name = "dgvDel";
+            dgvDel.Resizable = DataGridViewTriState.True;
+            dgvDel.SortMode = DataGridViewColumnSortMode.Automatic;
+            dgvDel.Width = 50;
+            // 
             // SalesInvoiceList
             // 
-            AutoScaleDimensions = new SizeF(8F, 24F);
+            AutoScaleDimensions = new SizeF(9F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1480, 657);
             Controls.Add(dataGridView1);

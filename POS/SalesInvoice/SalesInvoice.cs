@@ -217,6 +217,7 @@ namespace POS.SalesInvoice
                 int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
                 int qtyColumnIndex = dataGridView1.Columns["dgvQty"].Index;
                 dataGridView1.Rows[selectedRowIndex].Cells[qtyColumnIndex].Value = qty;
+                lblSelectedQty.Text = qty.ToString();
             }
 
         }

@@ -107,25 +107,28 @@
             HeaderPanel.Controls.Add(CategoryPanel);
             HeaderPanel.Dock = DockStyle.Top;
             HeaderPanel.Location = new Point(0, 0);
+            HeaderPanel.Margin = new Padding(3, 4, 3, 4);
             HeaderPanel.Name = "HeaderPanel";
-            HeaderPanel.Size = new Size(1245, 72);
+            HeaderPanel.Size = new Size(1423, 96);
             HeaderPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1161, 3);
+            pictureBox1.Location = new Point(1327, 4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(81, 69);
+            pictureBox1.Size = new Size(93, 92);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // CategoryPanel
             // 
-            CategoryPanel.Location = new Point(299, 3);
+            CategoryPanel.Location = new Point(343, 4);
+            CategoryPanel.Margin = new Padding(3, 4, 3, 4);
             CategoryPanel.Name = "CategoryPanel";
-            CategoryPanel.Size = new Size(856, 69);
+            CategoryPanel.Size = new Size(978, 92);
             CategoryPanel.TabIndex = 1;
             // 
             // ProductPanel
@@ -133,10 +136,11 @@
             ProductPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ProductPanel.BackColor = SystemColors.ActiveCaption;
             ProductPanel.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ProductPanel.Location = new Point(-1, 78);
+            ProductPanel.Location = new Point(-1, 104);
+            ProductPanel.Margin = new Padding(3, 4, 3, 4);
             ProductPanel.Name = "ProductPanel";
             ProductPanel.RightToLeft = RightToLeft.Yes;
-            ProductPanel.Size = new Size(798, 644);
+            ProductPanel.Size = new Size(912, 859);
             ProductPanel.TabIndex = 1;
             // 
             // InvoicePanel
@@ -172,9 +176,10 @@
             InvoicePanel.Controls.Add(btnNext);
             InvoicePanel.Controls.Add(btnPrevious);
             InvoicePanel.Controls.Add(dataGridView1);
-            InvoicePanel.Location = new Point(800, 78);
+            InvoicePanel.Location = new Point(914, 104);
+            InvoicePanel.Margin = new Padding(3, 4, 3, 4);
             InvoicePanel.Name = "InvoicePanel";
-            InvoicePanel.Size = new Size(445, 712);
+            InvoicePanel.Size = new Size(509, 949);
             InvoicePanel.TabIndex = 2;
             InvoicePanel.Paint += InvoicePanel_Paint;
             // 
@@ -188,54 +193,53 @@
             panel1.Controls.Add(label2);
             panel1.Font = new Font("Janna LT", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 178);
             panel1.ForeColor = SystemColors.ControlText;
-            panel1.Location = new Point(0, 100);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(0, 133);
             panel1.Name = "panel1";
-            panel1.Size = new Size(445, 29);
+            panel1.Size = new Size(509, 39);
             panel1.TabIndex = 34;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(4, 3);
+            label13.Location = new Point(5, 4);
             label13.Name = "label13";
-            label13.Size = new Size(60, 26);
+            label13.Size = new Size(72, 31);
             label13.TabIndex = 6;
             label13.Text = "الاجمالي";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(77, 3);
+            label12.Location = new Point(88, 4);
             label12.Name = "label12";
-            label12.Size = new Size(46, 26);
+            label12.Size = new Size(54, 31);
             label12.TabIndex = 5;
             label12.Text = "السعر";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(122, 3);
+            label11.Location = new Point(139, 4);
             label11.Name = "label11";
-            label11.Size = new Size(47, 26);
+            label11.Size = new Size(55, 31);
             label11.TabIndex = 4;
             label11.Text = "الكمية";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(283, 3);
+            label4.Location = new Point(323, 4);
             label4.Name = "label4";
-            label4.Size = new Size(50, 26);
+            label4.Size = new Size(61, 31);
             label4.TabIndex = 1;
             label4.Text = "الوصف";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(404, 3);
+            label2.Location = new Point(462, 4);
             label2.Name = "label2";
-            label2.Size = new Size(30, 26);
+            label2.Size = new Size(36, 31);
             label2.TabIndex = 0;
             label2.Text = "SN";
             // 
@@ -244,9 +248,10 @@
             button10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button10.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.Location = new Point(62, 524);
+            button10.Location = new Point(71, 699);
+            button10.Margin = new Padding(3, 4, 3, 4);
             button10.Name = "button10";
-            button10.Size = new Size(44, 47);
+            button10.Size = new Size(50, 63);
             button10.TabIndex = 33;
             button10.TextAlign = ContentAlignment.BottomCenter;
             button10.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -257,9 +262,10 @@
             button9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button9.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.Location = new Point(12, 524);
+            button9.Location = new Point(14, 699);
+            button9.Margin = new Padding(3, 4, 3, 4);
             button9.Name = "button9";
-            button9.Size = new Size(44, 47);
+            button9.Size = new Size(50, 63);
             button9.TabIndex = 32;
             button9.TextAlign = ContentAlignment.BottomCenter;
             button9.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -268,44 +274,49 @@
             // txtAddress
             // 
             txtAddress.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            txtAddress.Location = new Point(13, 606);
+            txtAddress.Location = new Point(15, 808);
+            txtAddress.Margin = new Padding(3, 4, 3, 4);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(306, 23);
+            txtAddress.Size = new Size(349, 27);
             txtAddress.TabIndex = 31;
             // 
             // txtPhone
             // 
             txtPhone.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            txtPhone.Location = new Point(49, 580);
+            txtPhone.Location = new Point(56, 773);
+            txtPhone.Margin = new Padding(3, 4, 3, 4);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(85, 23);
+            txtPhone.Size = new Size(97, 27);
             txtPhone.TabIndex = 30;
             // 
             // txtDeliveryTime
             // 
             txtDeliveryTime.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             txtDeliveryTime.Format = DateTimePickerFormat.Time;
-            txtDeliveryTime.Location = new Point(186, 554);
+            txtDeliveryTime.Location = new Point(213, 739);
+            txtDeliveryTime.Margin = new Padding(3, 4, 3, 4);
             txtDeliveryTime.Name = "txtDeliveryTime";
-            txtDeliveryTime.Size = new Size(134, 23);
+            txtDeliveryTime.Size = new Size(153, 27);
             txtDeliveryTime.TabIndex = 29;
             // 
             // cbClient
             // 
             cbClient.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             cbClient.FormattingEnabled = true;
-            cbClient.Location = new Point(186, 580);
+            cbClient.Location = new Point(213, 773);
+            cbClient.Margin = new Padding(3, 4, 3, 4);
             cbClient.Name = "cbClient";
-            cbClient.Size = new Size(134, 23);
+            cbClient.Size = new Size(153, 28);
             cbClient.TabIndex = 28;
             // 
             // cbDelivery
             // 
             cbDelivery.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             cbDelivery.FormattingEnabled = true;
-            cbDelivery.Location = new Point(186, 526);
+            cbDelivery.Location = new Point(213, 701);
+            cbDelivery.Margin = new Padding(3, 4, 3, 4);
             cbDelivery.Name = "cbDelivery";
-            cbDelivery.Size = new Size(134, 23);
+            cbDelivery.Size = new Size(153, 28);
             cbDelivery.TabIndex = 27;
             // 
             // label10
@@ -313,9 +324,9 @@
             label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label10.AutoSize = true;
             label10.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(139, 578);
+            label10.Location = new Point(159, 771);
             label10.Name = "label10";
-            label10.Size = new Size(42, 22);
+            label10.Size = new Size(52, 29);
             label10.TabIndex = 26;
             label10.Text = "الهاتف";
             // 
@@ -324,9 +335,9 @@
             label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label9.AutoSize = true;
             label9.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(355, 603);
+            label9.Location = new Point(406, 804);
             label9.Name = "label9";
-            label9.Size = new Size(44, 22);
+            label9.Size = new Size(56, 29);
             label9.TabIndex = 25;
             label9.Text = "العنوان";
             // 
@@ -335,9 +346,9 @@
             label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label8.AutoSize = true;
             label8.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(333, 580);
+            label8.Location = new Point(381, 773);
             label8.Name = "label8";
-            label8.Size = new Size(66, 22);
+            label8.Size = new Size(83, 29);
             label8.TabIndex = 24;
             label8.Text = "اسم الزبون";
             // 
@@ -346,9 +357,9 @@
             label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label7.AutoSize = true;
             label7.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(322, 555);
+            label7.Location = new Point(368, 740);
             label7.Name = "label7";
-            label7.Size = new Size(76, 22);
+            label7.Size = new Size(95, 29);
             label7.TabIndex = 23;
             label7.Text = "وقت التوصيل";
             // 
@@ -357,9 +368,9 @@
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(322, 528);
+            label6.Location = new Point(368, 704);
             label6.Name = "label6";
-            label6.Size = new Size(77, 22);
+            label6.Size = new Size(94, 29);
             label6.TabIndex = 22;
             label6.Text = "عامل التوصيل";
             // 
@@ -368,9 +379,9 @@
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
             label5.Font = new Font("Janna LT", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(345, 500);
+            label5.Location = new Point(394, 667);
             label5.Name = "label5";
-            label5.Size = new Size(58, 24);
+            label5.Size = new Size(85, 31);
             label5.TabIndex = 21;
             label5.Text = "الإجمالي:";
             // 
@@ -380,9 +391,10 @@
             btnCash.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCash.Image = (Image)resources.GetObject("btnCash.Image");
             btnCash.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCash.Location = new Point(348, 676);
+            btnCash.Location = new Point(398, 901);
+            btnCash.Margin = new Padding(3, 4, 3, 4);
             btnCash.Name = "btnCash";
-            btnCash.Size = new Size(73, 33);
+            btnCash.Size = new Size(83, 44);
             btnCash.TabIndex = 20;
             btnCash.Text = "كاش";
             btnCash.TextAlign = ContentAlignment.MiddleLeft;
@@ -395,9 +407,10 @@
             btnToAccount.Font = new Font("Janna LT", 6.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnToAccount.Image = (Image)resources.GetObject("btnToAccount.Image");
             btnToAccount.ImageAlign = ContentAlignment.TopCenter;
-            btnToAccount.Location = new Point(272, 678);
+            btnToAccount.Location = new Point(311, 904);
+            btnToAccount.Margin = new Padding(3, 4, 3, 4);
             btnToAccount.Name = "btnToAccount";
-            btnToAccount.Size = new Size(73, 33);
+            btnToAccount.Size = new Size(83, 44);
             btnToAccount.TabIndex = 19;
             btnToAccount.Text = "بالحساب";
             btnToAccount.TextAlign = ContentAlignment.MiddleLeft;
@@ -410,9 +423,10 @@
             btnNew.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNew.Image = (Image)resources.GetObject("btnNew.Image");
             btnNew.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNew.Location = new Point(348, 641);
+            btnNew.Location = new Point(398, 855);
+            btnNew.Margin = new Padding(3, 4, 3, 4);
             btnNew.Name = "btnNew";
-            btnNew.Size = new Size(73, 33);
+            btnNew.Size = new Size(83, 44);
             btnNew.TabIndex = 18;
             btnNew.Text = "جديد";
             btnNew.TextAlign = ContentAlignment.MiddleLeft;
@@ -426,9 +440,10 @@
             btnSave.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSave.Image = (Image)resources.GetObject("btnSave.Image");
             btnSave.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSave.Location = new Point(272, 641);
+            btnSave.Location = new Point(311, 855);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(73, 33);
+            btnSave.Size = new Size(83, 44);
             btnSave.TabIndex = 17;
             btnSave.Text = "حفظ";
             btnSave.TextAlign = ContentAlignment.MiddleLeft;
@@ -442,9 +457,10 @@
             btnDelete.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
             btnDelete.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDelete.Location = new Point(196, 641);
+            btnDelete.Location = new Point(224, 855);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(73, 33);
+            btnDelete.Size = new Size(83, 44);
             btnDelete.TabIndex = 16;
             btnDelete.Text = "إلغاء";
             btnDelete.TextAlign = ContentAlignment.MiddleLeft;
@@ -456,9 +472,10 @@
             btnPrint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnPrint.Font = new Font("Janna LT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPrint.Image = (Image)resources.GetObject("btnPrint.Image");
-            btnPrint.Location = new Point(13, 641);
+            btnPrint.Location = new Point(15, 855);
+            btnPrint.Margin = new Padding(3, 4, 3, 4);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(76, 33);
+            btnPrint.Size = new Size(87, 44);
             btnPrint.TabIndex = 15;
             btnPrint.Text = "طباعة";
             btnPrint.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -471,9 +488,9 @@
             lblTotal.BackColor = Color.Red;
             lblTotal.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotal.ForeColor = Color.White;
-            lblTotal.Location = new Point(13, 494);
+            lblTotal.Location = new Point(15, 659);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(25, 29);
+            lblTotal.Size = new Size(32, 37);
             lblTotal.TabIndex = 14;
             lblTotal.Text = "0";
             // 
@@ -481,18 +498,19 @@
             // 
             txtTime.Format = DateTimePickerFormat.Time;
             txtTime.ImeMode = ImeMode.Disable;
-            txtTime.Location = new Point(12, 66);
+            txtTime.Location = new Point(14, 88);
+            txtTime.Margin = new Padding(3, 4, 3, 4);
             txtTime.Name = "txtTime";
-            txtTime.Size = new Size(99, 23);
+            txtTime.Size = new Size(113, 27);
             txtTime.TabIndex = 13;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(117, 65);
+            label3.Location = new Point(134, 87);
             label3.Name = "label3";
-            label3.Size = new Size(43, 24);
+            label3.Size = new Size(55, 31);
             label3.TabIndex = 12;
             label3.Text = "الوقت";
             // 
@@ -500,18 +518,19 @@
             // 
             txtDate.Format = DateTimePickerFormat.Short;
             txtDate.ImeMode = ImeMode.Disable;
-            txtDate.Location = new Point(266, 70);
+            txtDate.Location = new Point(304, 93);
+            txtDate.Margin = new Padding(3, 4, 3, 4);
             txtDate.Name = "txtDate";
-            txtDate.Size = new Size(99, 23);
+            txtDate.Size = new Size(113, 27);
             txtDate.TabIndex = 11;
             // 
             // lbDate
             // 
             lbDate.AutoSize = true;
             lbDate.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbDate.Location = new Point(373, 67);
+            lbDate.Location = new Point(426, 89);
             lbDate.Name = "lbDate";
-            lbDate.Size = new Size(40, 24);
+            lbDate.Size = new Size(53, 31);
             lbDate.TabIndex = 9;
             lbDate.Text = "التاريخ";
             // 
@@ -520,9 +539,9 @@
             lblInvNo.AutoSize = true;
             lblInvNo.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInvNo.ForeColor = Color.Red;
-            lblInvNo.Location = new Point(186, 34);
+            lblInvNo.Location = new Point(213, 45);
             lblInvNo.Name = "lblInvNo";
-            lblInvNo.Size = new Size(17, 19);
+            lblInvNo.Size = new Size(20, 24);
             lblInvNo.TabIndex = 8;
             lblInvNo.Text = "0";
             // 
@@ -530,27 +549,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(234, 28);
+            label1.Location = new Point(267, 37);
             label1.Name = "label1";
-            label1.Size = new Size(73, 24);
+            label1.Size = new Size(95, 31);
             label1.TabIndex = 7;
             label1.Text = "رقم الفاتورة";
             // 
             // btnNext
             // 
             btnNext.Image = (Image)resources.GetObject("btnNext.Image");
-            btnNext.Location = new Point(396, 19);
+            btnNext.Location = new Point(453, 25);
+            btnNext.Margin = new Padding(3, 4, 3, 4);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(39, 42);
+            btnNext.Size = new Size(45, 56);
             btnNext.TabIndex = 6;
             btnNext.UseVisualStyleBackColor = true;
             // 
             // btnPrevious
             // 
             btnPrevious.Image = (Image)resources.GetObject("btnPrevious.Image");
-            btnPrevious.Location = new Point(12, 17);
+            btnPrevious.Location = new Point(14, 23);
+            btnPrevious.Margin = new Padding(3, 4, 3, 4);
             btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(39, 42);
+            btnPrevious.Size = new Size(45, 56);
             btnPrevious.TabIndex = 5;
             btnPrevious.UseVisualStyleBackColor = true;
             // 
@@ -568,10 +589,11 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Location = new Point(4, 130);
+            dataGridView1.Location = new Point(5, 173);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(442, 361);
+            dataGridView1.Size = new Size(505, 481);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.RowsAdded += dataGridView1_RowsAdded;
@@ -643,9 +665,10 @@
             FooterPanel.Controls.Add(btn3);
             FooterPanel.Controls.Add(btn2);
             FooterPanel.Controls.Add(btn1);
-            FooterPanel.Location = new Point(0, 719);
+            FooterPanel.Location = new Point(0, 959);
+            FooterPanel.Margin = new Padding(3, 4, 3, 4);
             FooterPanel.Name = "FooterPanel";
-            FooterPanel.Size = new Size(794, 65);
+            FooterPanel.Size = new Size(907, 87);
             FooterPanel.TabIndex = 3;
             // 
             // lblSelectedQty
@@ -657,9 +680,9 @@
             lblSelectedQty.FlatStyle = FlatStyle.Flat;
             lblSelectedQty.Font = new Font("Janna LT", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSelectedQty.ForeColor = SystemColors.ControlText;
-            lblSelectedQty.Location = new Point(573, 19);
+            lblSelectedQty.Location = new Point(662, 25);
             lblSelectedQty.Name = "lblSelectedQty";
-            lblSelectedQty.Size = new Size(28, 37);
+            lblSelectedQty.Size = new Size(36, 47);
             lblSelectedQty.TabIndex = 31;
             lblSelectedQty.Text = "1";
             lblSelectedQty.Click += lblSelectedQty_Click;
@@ -670,9 +693,10 @@
             btnQtyUp.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnQtyUp.Image = (Image)resources.GetObject("btnQtyUp.Image");
             btnQtyUp.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQtyUp.Location = new Point(616, 16);
+            btnQtyUp.Location = new Point(704, 21);
+            btnQtyUp.Margin = new Padding(3, 4, 3, 4);
             btnQtyUp.Name = "btnQtyUp";
-            btnQtyUp.Size = new Size(42, 39);
+            btnQtyUp.Size = new Size(48, 52);
             btnQtyUp.TabIndex = 30;
             btnQtyUp.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnQtyUp.UseVisualStyleBackColor = true;
@@ -684,9 +708,10 @@
             btnQtyDn.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnQtyDn.Image = (Image)resources.GetObject("btnQtyDn.Image");
             btnQtyDn.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQtyDn.Location = new Point(526, 14);
+            btnQtyDn.Location = new Point(601, 19);
+            btnQtyDn.Margin = new Padding(3, 4, 3, 4);
             btnQtyDn.Name = "btnQtyDn";
-            btnQtyDn.Size = new Size(41, 43);
+            btnQtyDn.Size = new Size(47, 57);
             btnQtyDn.TabIndex = 29;
             btnQtyDn.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnQtyDn.UseVisualStyleBackColor = true;
@@ -697,9 +722,9 @@
             lblSelectedItem.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblSelectedItem.AutoSize = true;
             lblSelectedItem.Font = new Font("Janna LT", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelectedItem.Location = new Point(674, 26);
+            lblSelectedItem.Location = new Point(770, 35);
             lblSelectedItem.Name = "lblSelectedItem";
-            lblSelectedItem.Size = new Size(62, 24);
+            lblSelectedItem.Size = new Size(76, 31);
             lblSelectedItem.TabIndex = 27;
             lblSelectedItem.Text = "selected";
             // 
@@ -708,9 +733,10 @@
             btn9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn9.ImageAlign = ContentAlignment.MiddleLeft;
-            btn9.Location = new Point(59, 21);
+            btn9.Location = new Point(67, 28);
+            btn9.Margin = new Padding(3, 4, 3, 4);
             btn9.Name = "btn9";
-            btn9.Size = new Size(45, 33);
+            btn9.Size = new Size(51, 44);
             btn9.TabIndex = 26;
             btn9.Text = "9";
             btn9.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -722,9 +748,10 @@
             btn8.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn8.ImageAlign = ContentAlignment.MiddleLeft;
-            btn8.Location = new Point(108, 21);
+            btn8.Location = new Point(123, 28);
+            btn8.Margin = new Padding(3, 4, 3, 4);
             btn8.Name = "btn8";
-            btn8.Size = new Size(45, 33);
+            btn8.Size = new Size(51, 44);
             btn8.TabIndex = 25;
             btn8.Text = "8";
             btn8.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -736,9 +763,10 @@
             btn7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn7.ImageAlign = ContentAlignment.MiddleLeft;
-            btn7.Location = new Point(160, 21);
+            btn7.Location = new Point(183, 28);
+            btn7.Margin = new Padding(3, 4, 3, 4);
             btn7.Name = "btn7";
-            btn7.Size = new Size(45, 33);
+            btn7.Size = new Size(51, 44);
             btn7.TabIndex = 24;
             btn7.Text = "7";
             btn7.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -750,9 +778,10 @@
             btn6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn6.ImageAlign = ContentAlignment.MiddleLeft;
-            btn6.Location = new Point(211, 21);
+            btn6.Location = new Point(241, 28);
+            btn6.Margin = new Padding(3, 4, 3, 4);
             btn6.Name = "btn6";
-            btn6.Size = new Size(45, 33);
+            btn6.Size = new Size(51, 44);
             btn6.TabIndex = 23;
             btn6.Text = "6";
             btn6.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -764,9 +793,10 @@
             btn5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn5.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5.Location = new Point(262, 21);
+            btn5.Location = new Point(299, 28);
+            btn5.Margin = new Padding(3, 4, 3, 4);
             btn5.Name = "btn5";
-            btn5.Size = new Size(45, 33);
+            btn5.Size = new Size(51, 44);
             btn5.TabIndex = 22;
             btn5.Text = "5";
             btn5.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -778,9 +808,10 @@
             btn4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn4.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4.Location = new Point(313, 21);
+            btn4.Location = new Point(358, 28);
+            btn4.Margin = new Padding(3, 4, 3, 4);
             btn4.Name = "btn4";
-            btn4.Size = new Size(45, 33);
+            btn4.Size = new Size(51, 44);
             btn4.TabIndex = 21;
             btn4.Text = "4";
             btn4.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -792,9 +823,10 @@
             btn3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn3.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3.Location = new Point(364, 21);
+            btn3.Location = new Point(416, 28);
+            btn3.Margin = new Padding(3, 4, 3, 4);
             btn3.Name = "btn3";
-            btn3.Size = new Size(45, 33);
+            btn3.Size = new Size(51, 44);
             btn3.TabIndex = 20;
             btn3.Text = "3";
             btn3.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -806,9 +838,10 @@
             btn2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn2.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2.Location = new Point(415, 21);
+            btn2.Location = new Point(474, 28);
+            btn2.Margin = new Padding(3, 4, 3, 4);
             btn2.Name = "btn2";
-            btn2.Size = new Size(45, 33);
+            btn2.Size = new Size(51, 44);
             btn2.TabIndex = 19;
             btn2.Text = "2";
             btn2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -820,9 +853,10 @@
             btn1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btn1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn1.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1.Location = new Point(466, 21);
+            btn1.Location = new Point(533, 28);
+            btn1.Margin = new Padding(3, 4, 3, 4);
             btn1.Name = "btn1";
-            btn1.Size = new Size(45, 33);
+            btn1.Size = new Size(51, 44);
             btn1.TabIndex = 18;
             btn1.Text = "1";
             btn1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -836,13 +870,14 @@
             // 
             // SalesInvoice
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1245, 791);
+            ClientSize = new Size(1423, 1055);
             Controls.Add(FooterPanel);
             Controls.Add(InvoicePanel);
             Controls.Add(HeaderPanel);
             Controls.Add(ProductPanel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SalesInvoice";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
